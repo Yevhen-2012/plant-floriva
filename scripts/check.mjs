@@ -30,9 +30,12 @@ function walk(dir) {
     }
     const background = $('img[data-plant-background-src]');
     if (background.length) {
-      const large = background.attr('data-plant-background-src');
-      if ($('img[src],source[srcset],link[rel="preload"]').toArray().some(el =>
-        ['src', 'srcset', 'href', 'imagesrcset'].some(attr => ($(el).attr(attr) ?? '').includes(large)))) errors.push(`${path.relative(root,file)}: full background loads before the first screen`);
+      if (background.length !== 3) errors.push(`${path.relative(root,file)}: missing a screen-size background variant`);
+      background.each((_, element) => {
+        const large = $(element).attr('data-plant-background-src');
+        if ($('img[src],source[srcset],link[rel="preload"]').toArray().some(el =>
+          ['src', 'srcset', 'href', 'imagesrcset'].some(attr => ($(el).attr(attr) ?? '').includes(large)))) errors.push(`${path.relative(root,file)}: full background loads before the first screen`);
+      });
       if (!$('script[src]').toArray().some(el => /\/background\.js\?v=/.test($(el).attr('src')))) errors.push(`${path.relative(root,file)}: missing background loader`);
     }
     $('[href],[src],[poster],[data-plant-src],[data-plant-background-src]').each((_, el) => {

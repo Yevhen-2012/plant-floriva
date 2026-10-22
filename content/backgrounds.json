@@ -1,0 +1,18 @@
+[
+  {
+    "className": "background-img-tablet",
+    "media": "(min-width: 768px) and (max-width: 1199px)",
+    "file": "assets/floriva-background-tablet-3x4-3765a4df3d.webp",
+    "preview": "assets/floriva-background-tablet-3x4-preview-0185f32e6b.webp",
+    "width": 1086,
+    "height": 1448
+  },
+  {
+    "className": "background-img-mobile",
+    "media": "(max-width: 767px)",
+    "file": "assets/floriva-background-mobile-9x16-5fcfc6c63d.webp",
+    "preview": "assets/floriva-background-mobile-9x16-preview-241e83945a.webp",
+    "width": 936,
+    "height": 1664
+  }
+]

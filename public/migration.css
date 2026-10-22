@@ -5,10 +5,13 @@
 body .button-main_btn,body .video-link,body .nav-ico-link-search{transition-duration:100ms}
 .footer__text-field{color:#fff;caret-color:#fff}
 .footer__text-field::placeholder{color:#fff;opacity:1}
-/* Preserve the lightweight background underneath the decoded desktop upgrade. */
+/* Preserve the lightweight background underneath each decoded screen-size variant. */
 .plant-background-hires{opacity:0;pointer-events:none;transition:opacity 1300ms ease}
 .plant-background-hires.is-ready{opacity:1}
 @media(prefers-reduced-motion:reduce){.plant-background-hires{transition:none}}
+@media(max-width:1199px){.background-img{display:none}}
+@media(min-width:768px) and (max-width:1199px){.background-img-tablet{display:block;filter:brightness(80%)}}
+@media(max-width:767px){.background-img-tablet{display:none}.background-img-mobile{display:block;filter:brightness(80%)}}
 /* The first screen must be visible before JavaScript finishes loading. */
 body .hero__content,body .hero__review-wrapper{opacity:1;visibility:visible;transform:none}
 /* Keep the product description in place while images and Swiper load. */

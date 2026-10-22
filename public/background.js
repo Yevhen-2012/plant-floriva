@@ -1,14 +1,12 @@
-(() => {
+document.querySelectorAll('img[data-plant-background-src]').forEach(background => {
   'use strict';
-  const background = document.querySelector('img.background-img[data-plant-background-src]');
-  if (!background) return;
 
-  const desktop = window.matchMedia('(min-width: 992px)');
+  const viewport = window.matchMedia(background.dataset.plantBackgroundMedia || '(min-width: 992px)');
   const connection = navigator.connection;
   let pageLoaded = document.readyState === 'complete';
   let scheduled = false;
   let started = false;
-  const eligible = () => desktop.matches && !document.hidden && !connection?.saveData &&
+  const eligible = () => viewport.matches && !document.hidden && !connection?.saveData &&
     !['slow-2g', '2g'].includes(connection?.effectiveType);
 
   const animationsPending = () => {
@@ -59,11 +57,11 @@
       if (!eligible()) { started = false; return; }
 
       const image = new Image();
-      image.className = 'background-img plant-background-hires';
+      image.className = `${background.className} plant-background-hires`;
       image.alt = '';
       image.setAttribute('aria-hidden', 'true');
-      image.width = 3840;
-      image.height = 1920;
+      image.width = Number(background.dataset.plantBackgroundWidth || 3840);
+      image.height = Number(background.dataset.plantBackgroundHeight || 1920);
       image.decoding = 'async';
       image.fetchPriority = 'low';
       image.src = background.dataset.plantBackgroundSrc;
@@ -89,7 +87,7 @@
   };
   window.addEventListener('load', () => { pageLoaded = true; schedule(); }, { once: true });
   document.addEventListener('visibilitychange', schedule);
-  desktop.addEventListener('change', schedule);
+  viewport.addEventListener('change', schedule);
   connection?.addEventListener('change', schedule);
   schedule();
-})();
+});

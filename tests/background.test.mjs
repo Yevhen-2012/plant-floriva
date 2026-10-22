@@ -6,18 +6,19 @@ import assert from 'node:assert/strict';
 const source = await fs.readFile(new URL('../public/background.js', import.meta.url), 'utf8');
 const settle = () => new Promise(resolve => setImmediate(resolve));
 
-function setup({ loaded = false, desktop = true, complete = true, hidden = false, saveData = false, effectiveType = '4g', idle = true, animations = [], tweens = [] } = {}) {
+function setup({ loaded = false, desktop = true, complete = true, hidden = false, saveData = false, effectiveType = '4g', idle = true, animations = [], tweens = [], profile = {} } = {}) {
   const timers = [], idleTasks = [], frames = [], requests = [], layers = [];
   let now = 0;
   let resolveImage, rejectImage;
   const decoded = new Promise((resolve, reject) => { resolveImage = resolve; rejectImage = reject; });
   const background = Object.assign(new EventTarget(), {
-    complete, naturalWidth: 1280, dataset: { plantBackgroundSrc: '../../assets/full.webp' },
+    complete, naturalWidth: 1280, className: profile.className || 'background-img',
+    dataset: { plantBackgroundSrc: '../../assets/full.webp', ...profile.dataset },
     decode: async () => {}, after: image => layers.push(image)
   });
   const document = Object.assign(new EventTarget(), {
     readyState: loaded ? 'complete' : 'interactive', hidden,
-    querySelector: () => background, getAnimations: () => animations
+    querySelectorAll: () => [background], getAnimations: () => animations
   });
   const media = Object.assign(new EventTarget(), { matches: desktop });
   const connection = Object.assign(new EventTarget(), { saveData, effectiveType });
@@ -82,7 +83,7 @@ test('waits for page and lightweight image, then fades in only after decoding', 
 });
 
 for (const [reason, options] of [
-  ['mobile', { desktop: false }],
+  ['an inactive viewport', { desktop: false }],
   ['data saver', { saveData: true }],
   ['slow connection', { effectiveType: '2g' }],
   ['hidden tab', { hidden: true }]
@@ -94,7 +95,7 @@ for (const [reason, options] of [
   });
 }
 
-test('can upgrade after switching from mobile to desktop', async () => {
+test('can upgrade after switching to the matching viewport', async () => {
   const page = setup({ loaded: true, desktop: false });
   page.media.matches = true;
   page.media.dispatchEvent(new Event('change'));
@@ -160,3 +161,17 @@ test('ignores infinite animations and reveals paused by a parent timeline', asyn
   await page.runScheduled();
   assert.equal(page.requests.length, 1);
 });
+
+for (const [className, width, height] of [['background-img-tablet', 1086, 1448], ['background-img-mobile', 900, 1600]]) {
+  test(`uses the matching layout and image dimensions for ${className}`, async () => {
+    const page = setup({ loaded: true, profile: { className, dataset: {
+      plantBackgroundWidth: String(width), plantBackgroundHeight: String(height)
+    } } });
+    await page.runScheduled();
+    page.resolveImage();
+    await settle();
+    assert.equal(page.layers[0].className, `${className} plant-background-hires`);
+    assert.equal(page.layers[0].width, width);
+    assert.equal(page.layers[0].height, height);
+  });
+}

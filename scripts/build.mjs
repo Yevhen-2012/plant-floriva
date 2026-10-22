@@ -11,6 +11,7 @@ for (const url of Object.keys(manifest.assets)) if (new URL(url).hostname === 'w
 const collections = JSON.parse(await fs.readFile(path.join(root, 'content/collections.json'), 'utf8'));
 const assistantTemplate = await fs.readFile(path.join(root, 'templates/assistant.html'), 'utf8');
 const imageManifest = JSON.parse(await fs.readFile(path.join(root, 'content/responsive-images.json'), 'utf8'));
+const backgroundProfiles = JSON.parse(await fs.readFile(path.join(root, 'content/backgrounds.json'), 'utf8'));
 const revisedAssets = await Promise.all([
   ['assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js', 'assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js'],
   ['js/migration.css', 'public/migration.css'],
@@ -179,7 +180,25 @@ for (const route of routes) {
   const background = $('img.background-img').first();
   if (background.length) {
     // Metadata only: the large image must not compete with the first screen.
-    background.attr('data-plant-background-src', relative(from, 'assets/floriva-background-smooth-3840x1920-0dcabad1f9.webp'));
+    background.attr({
+      'data-plant-background-src': relative(from, 'assets/floriva-background-smooth-3840x1920-0dcabad1f9.webp'),
+      'data-plant-background-media': '(min-width: 1200px)'
+    });
+    for (const profile of backgroundProfiles) {
+      let image = $(`img.${profile.className}`).first();
+      if (!image.length) {
+        image = $('<img>').attr('class', profile.className);
+        background.after(image);
+      }
+      image.removeAttr('srcset sizes').attr({
+        src: relative(from, profile.preview), alt: '', loading: 'eager', decoding: 'async', fetchpriority: 'low',
+        width: profile.width, height: profile.height,
+        'data-plant-background-src': relative(from, profile.file),
+        'data-plant-background-media': profile.media,
+        'data-plant-background-width': profile.width,
+        'data-plant-background-height': profile.height
+      });
+    }
     $('body').append(`<script src="${relative(from, 'js/background.js')}"></script>`);
   }
   const firstProductImage = $('.product__swiper-wrapper .swiper-img').first();
