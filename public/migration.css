@@ -14,3 +14,26 @@ body .hero__content,body .hero__review-wrapper{opacity:1;visibility:visible;tran
 .product__swiper-wrapper .swiper-img{width:auto;height:auto;max-height:100%;object-fit:contain}
 @media(max-width:991px){.product__swiper-wrapper .swiper{height:30rem}}
 @media(max-width:767px){.product__swiper-wrapper .swiper{height:20rem}}
+/* Give the home sections the same spacing on phones. */
+@media(max-width:767.98px){
+  .hero .hero__wrapper{grid-template-columns:minmax(0,1fr);padding-bottom:0}
+  .hero__content,.hero__review-wrapper{min-width:0}
+  .hero__review-wrapper{align-self:end}
+  .hero__customer-review-content{max-width:100%;height:auto;min-height:12rem}
+  :is(.trendy-section,.top-selling-section,.customer-review-section,.blog-section){padding-top:4rem;padding-bottom:0}
+  :is(.trendy-section,.top-selling-section,.customer-review-section,.blog-section)>.padding-global>.container>.header-wraper{margin:0 0 3rem}
+  :is(.trendy-section,.top-selling-section,.customer-review-section,.blog-section) .header-content{max-width:100%;margin:0}
+  :is(.trendy-section,.top-selling-section,.customer-review-section,.blog-section) .header-content .h3{margin:0;text-align:center;line-height:1.15}
+  .trendy-section .trendy__content{margin-bottom:0}
+  /* Reserve the part of each plant image that extends above its card. */
+  .top-selling-section .top-selling__content{padding-top:6rem}
+  .top-selling-section .top-selling__list{grid-template-columns:minmax(0,370px);padding-inline:0}
+  .top-selling-section .card-wrap{width:100%}
+  .top-selling-section .card-img-wraper{top:-6rem}
+  .top-selling-section .card-img{top:0}
+  .blog-section{padding-bottom:4rem}
+}
+@media(max-width:479.98px){
+  .hero__content-button-wraper{flex-wrap:wrap;gap:1rem}
+  :is(.trendy-section,.top-selling-section,.customer-review-section,.blog-section) .header-content .h3{font-size:clamp(1.75rem,8vw,2.375rem)}
+}
