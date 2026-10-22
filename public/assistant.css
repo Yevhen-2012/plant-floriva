@@ -81,8 +81,14 @@
   color: #233a27;
   box-shadow: 0 20px 64px #07110a66;
   color-scheme: light;
+  transform-origin: bottom right;
 }
 #floriva-assistant .floriva-assistant-panel[hidden] { display: none; }
+#floriva-assistant .floriva-assistant-panel:not([hidden]) { animation: floriva-panel-in 320ms cubic-bezier(.2,.7,.3,1) both; }
+@keyframes floriva-panel-in {
+  from { opacity: 0; transform: translateY(14px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
 #floriva-assistant .floriva-assistant-header { display: flex; align-items: center; gap: 11px; flex: 0 0 auto; padding: 18px; background: #d6e1c9; border-bottom: 1px solid #b8c8ac; }
 #floriva-assistant .floriva-assistant-header .floriva-assistant-avatar { width: 42px; height: 42px; }
 #floriva-assistant .floriva-assistant-heading { min-width: 0; }
@@ -113,4 +119,5 @@
 }
 @media (prefers-reduced-motion: reduce) {
   #floriva-assistant .floriva-assistant-launcher, #floriva-assistant .floriva-assistant-avatar { transition: none; }
+  #floriva-assistant .floriva-assistant-panel:not([hidden]) { animation: none; }
 }
