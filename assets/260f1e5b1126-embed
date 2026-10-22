@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #mapDiv {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mapDiv"></div>
+      
+    <script nonce="SVuUoOOU9G4ho3pqiZ4SxQ">
+      function onEmbedLoad() {
+        initEmbed([null,null,null,null,null,[[[2,"spotlit",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,null,11,null,[null,null,null,null,null,null,null,null,null,null,null,null,null,1]]]],null,null,[[null,null,null,null,null,null,null,null,null,null,null,null,null,[[["959620668643975219","14253220909081303553"],"/g/11s769b_s1",null,[434879680,4279969158],null,null,null,null,null,null,null,null,null,null,"gcid:clothing_store"],0,0,null,null,0,null,0,0]]]],null,["ru","ua"],[null,null,null,"/maps/api/js/ApplicationService.GetEntityDetails","/maps/embed/upgrade204",null,"/maps/embed/record204"],null,null,null,null,null,null,null,null,"gtDZapqyAvD0i-gPscqAmAc",null,null,null,[[[4146.43178080061,-1.4998138,43.487968],[0,0,0],null,13.10000038146973],null,1,[["0xd5141e9f1a5a033:0xc5cd9ce666f61a01","Morgan, Bab 2, Centre Commercial Carrefour, Av. Jean Léon Laporte, 64600 Anglet, Франция",[43.487968,-1.4998138],"14253220909081303553"],"Morgan",["Bab 2, Centre Commercial Carrefour","Av. Jean Léon Laporte","64600 Anglet, Франция"],4.900000095367432,"Отзывов: 249",null,null,"+33 5 59 03 68 20",null,null,null,["/url?q=https://www.morgandetoi.fr/%3Fat_campaign%3Dmagasin%26at_medium%3Dgmb\u0026opi=79508299\u0026sa=U\u0026ved=2ahUKEwia-9Cuoc2XAxVw-gIHHTElAHMQ61goEHoECAAQFQ\u0026usg=AOvVaw1DjYxEmCKzp3ZhgxASC36L","morgandetoi.fr",null,"2ahUKEwia-9Cuoc2XAxVw-gIHHTElAHMQ61goEHoECAAQFQ"],"Магазин одежды","Bab 2, Centre Commercial Carrefour, Av. Jean Léon Laporte, 64600 Anglet, Франция",null,null,null,null,null,null,null,null,null,null,null,null,null,"ChIJM6Cl8elBUQ0RARr2ZuaczcU",null,null,"2ahUKEwia-9Cuoc2XAxVw-gIHHTElAHMQ8BcoAHoECAAQAg",null,null,["tel:+33559036820"],null,null,null,1,["2ahUKEwia-9Cuoc2XAxVw-gIHHTElAHMQqtMBKAp6BAgAEA0",["8CMWFGQ2+53"],["FGQ2+53 Англет, Франция"],3],[[["четверг",4,[2026,10,22],[["09:30–20:00",[[9,30],[20]]]],0,1],["пятница",5,[2026,10,23],[["09:30–20:00",[[9,30],[20]]]],0,1],["суббота",6,[2026,10,24],[["09:30–20:00",[[9,30],[20]]]],0,1],["воскресенье",7,[2026,10,25],[["Закрыто"]],0,2],["понедельник",1,[2026,10,26],[["09:30–20:00",[[9,30],[20]]]],0,1],["вторник",2,[2026,10,27],[["09:30–20:00",[[9,30],[20]]]],0,1],["среда",3,[2026,10,28],[["09:30–20:00",[[9,30],[20]]]],0,1]],[["четверг",4,[2026,10,22],[["09:30–20:00",[[9,30],[20]]]],0,1],0,1,null,["Открыто · Закроется в 20:00",[[0,7,[null,[4281040703,4285388172]]]]],["Открыто · Закроется в 20:00",[[0,7,[null,[4281040703,4285388172]]]]],null,[19],["Открыто",[[0,7,[null,[4281040703,4285388172]]]]]],4,null,null,null,1]]],null,null,null,0,null,null,null,null,null,null,[1]]);
+      }
+      function onApiLoad() {
+        var embed = document.createElement('script');
+        embed.src = "https://maps.gstatic.com/maps-api-v3/embed/js/66/9d/intl/ru_ALL/init_embed.js";
+        document.body.appendChild(embed);
+      }
+    </script>
+    <link rel="preload" href="https://maps.gstatic.com/maps-api-v3/embed/js/66/9d/intl/ru_ALL/init_embed.js" nonce="SVuUoOOU9G4ho3pqiZ4SxQ" as="script" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&amp;paint_origin=&amp;libraries=geometry,search&amp;v=weekly&amp;loading=async&amp;language=ru&amp;region=ua&amp;experimentation=allowed&amp;callback=onApiLoad" nonce="SVuUoOOU9G4ho3pqiZ4SxQ" async defer></script>
+  </body>
+</html>

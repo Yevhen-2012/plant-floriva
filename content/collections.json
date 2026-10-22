@@ -1,0 +1,695 @@
+[
+  {
+    "schema": {
+      "slug": "category",
+      "displayName": "Categories"
+    },
+    "items": [
+      {
+        "id": "69f61d321328190e3425c2be",
+        "fieldData": {
+          "main-img": {
+            "fileId": "69f61d321328190e3425c2a3",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f61d321328190e3425c2a3_image17.jpeg",
+            "alt": null
+          },
+          "description": "Donec eu felis at libero co",
+          "price": null,
+          "name": "trendy-plant",
+          "slug": "trendy-plant"
+        }
+      },
+      {
+        "id": "69f61d321328190e3425c2bc",
+        "fieldData": {
+          "main-img": null,
+          "description": "Vivamus vitae arcu vel velit efficitur vestibulum vel in purus. Maecenas euismod sapien eu arcu convallis, vitae",
+          "price": 9058,
+          "name": "tropical",
+          "slug": "tropical"
+        }
+      },
+      {
+        "id": "69f61d321328190e3425c2ba",
+        "fieldData": {
+          "main-img": {
+            "fileId": "69f61d321328190e3425c29d",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f61d321328190e3425c29d_image2.jpeg",
+            "alt": null
+          },
+          "description": "Integer rutrum ante et nunc venenatis, id ultricies risus ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integ",
+          "price": 32394,
+          "name": "succulents",
+          "slug": "succulents"
+        }
+      },
+      {
+        "id": "69f61d321328190e3425c2b8",
+        "fieldData": {
+          "main-img": {
+            "fileId": "69f61d321328190e3425c299",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f61d321328190e3425c299_image18.jpeg",
+            "alt": null
+          },
+          "description": "Donec eu felis at libero consequat sagittis a et urna. Maecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum ma",
+          "price": 17469,
+          "name": "cactus",
+          "slug": "cactus"
+        }
+      },
+      {
+        "id": "69f61d321328190e3425c2b6",
+        "fieldData": {
+          "main-img": {
+            "fileId": "69f61d321328190e3425c2a0",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f61d321328190e3425c2a0_image15.jpeg",
+            "alt": null
+          },
+          "description": "Maecenas euismod sapien eu arcu convallis, vitae ve",
+          "price": 98211,
+          "name": "new arrivals",
+          "slug": "new-arrivals"
+        }
+      }
+    ]
+  },
+  {
+    "schema": {
+      "slug": "product",
+      "displayName": "Products"
+    },
+    "items": [
+      {
+        "id": "69f61d3b7621c1fce04a27ae",
+        "fieldData": {
+          "sku-properties": [],
+          "category": [
+            "69f61d321328190e3425c2be",
+            "69f61d321328190e3425c2ba",
+            "69f61d321328190e3425c2b8",
+            "69f61d321328190e3425c2b6"
+          ],
+          "description": "Golden Barrel cactus thrives in bright sunlight and dry conditions indoors.\nIts sculptural shape and golden spines create a striking desert accent.\nThis slow growing cactus prefers minimal watering and well drained soil.\nPerfect for modern interiors, it adds texture and natural character easily.",
+          "shippable": true,
+          "tax-category": "standard-taxable",
+          "default-sku": "69f61d3c7621c1fce04a2840",
+          "ec-product-type": "b6ccc1830db4b1babeb06a9ac5f6dd76",
+          "main-img": {
+            "fileId": "69f8d12c2ffb14575b8f134b",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f8d12c2ffb14575b8f134b_planty-3.webp.png",
+            "alt": null
+          },
+          "is-trendy-plant": true,
+          "trendy-sort-order": 3,
+          "top-selling": true,
+          "short-descr": "Golden Barrel cactus brings sculptural beauty with its bold golden spines.",
+          "image-gallery": [
+            {
+              "fileId": "6a1038d311a5a3d0e10a664f",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1038d311a5a3d0e10a664f_planty-3.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1038d46a1a6a795a8f087f",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1038d46a1a6a795a8f087f_Peperomia%20planty-2.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1038d3796f840ea380c467",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1038d3796f840ea380c467_planty-2.webp",
+              "alt": null
+            }
+          ],
+          "moisture-needs": 3,
+          "name": "Echinocactus",
+          "slug": "echinocactus"
+        }
+      },
+      {
+        "id": "69f61d3b7621c1fce04a27a7",
+        "fieldData": {
+          "sku-properties": [],
+          "category": [
+            "69f61d321328190e3425c2be",
+            "69f61d321328190e3425c2b8"
+          ],
+          "description": "Fusce aliquet turpis at orci bibendum, non convallis justo tempor.\nMaecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum maximus.\nInteger rutrum ante et nunc venenatis, id ultricies risus ultricies.\nDonec eu felis at libero consequat sagittis a et urna.\nCras sit amet velit id nulla ",
+          "shippable": true,
+          "tax-category": "standard-taxable",
+          "default-sku": "69f61d3c7621c1fce04a2862",
+          "ec-product-type": "b6ccc1830db4b1babeb06a9ac5f6dd76",
+          "main-img": {
+            "fileId": "69f9c9e7e9bc2ec60810028a",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9c9e7e9bc2ec60810028a_Alocasia%20planty-2.webp",
+            "alt": null
+          },
+          "is-trendy-plant": true,
+          "trendy-sort-order": 4,
+          "top-selling": true,
+          "short-descr": "Fusce aliquet turpis at orci bibendum, non convallis justo tempor. Maecenas euismod sapien eu arcu convallis.",
+          "image-gallery": [
+            {
+              "fileId": "6a1893c46abbc45187ef7fb0",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1893c46abbc45187ef7fb0_Alocasia%20planty-3.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1893c49a99f19804353e55",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1893c49a99f19804353e55_Alocasia%20planty-4.webp",
+              "alt": null
+            },
+            {
+              "fileId": "69f9c9e7e9bc2ec60810028a",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9c9e7e9bc2ec60810028a_Alocasia%20planty-2.webp",
+              "alt": null
+            }
+          ],
+          "moisture-needs": 4,
+          "name": "Alocasia",
+          "slug": "alocasia"
+        }
+      },
+      {
+        "id": "69f61d3b7621c1fce04a27a5",
+        "fieldData": {
+          "sku-properties": [],
+          "category": [
+            "69f61d321328190e3425c2bc"
+          ],
+          "description": "Praesent nec orci at nulla consequat congue ut non arcu.\nDonec eu felis at libero consequat sagittis a et urna.\nMaecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum maximus.\nInteger rutrum ante et nunc venenatis, id ultricies risus",
+          "shippable": true,
+          "tax-category": "standard-taxable",
+          "default-sku": "69f61d3c7621c1fce04a288d",
+          "ec-product-type": "b6ccc1830db4b1babeb06a9ac5f6dd76",
+          "main-img": {
+            "fileId": "69f9ca135cc6be793cac11de",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca135cc6be793cac11de_Dracaena%20planty-2.webp",
+            "alt": null
+          },
+          "is-trendy-plant": false,
+          "trendy-sort-order": null,
+          "top-selling": true,
+          "short-descr": "Praesent nec orci at nulla consequat congue ut non arcu. Donec eu felis at libero consequat sagittis a et urna.",
+          "image-gallery": [
+            {
+              "fileId": "69f9ca135cc6be793cac11de",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca135cc6be793cac11de_Dracaena%20planty-2.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1894d49a197f5891402817",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1894d49a197f5891402817_Dracaena%20planty-3.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1894d4119af5ce9f1bf9ab",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1894d4119af5ce9f1bf9ab_Dracaena%20planty-4.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1894d4d6fd6ba3d0036d1c",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1894d4d6fd6ba3d0036d1c_Dracaena%20planty-5.webp",
+              "alt": null
+            }
+          ],
+          "moisture-needs": 6,
+          "name": "Dracaena",
+          "slug": "dracaena"
+        }
+      },
+      {
+        "id": "69f61d3b7621c1fce04a27a1",
+        "fieldData": {
+          "sku-properties": [],
+          "category": [
+            "69f61d321328190e3425c2bc",
+            "69f61d321328190e3425c2ba"
+          ],
+          "description": "Donec eu felis at libero consequat sagittis a et urna.\nPraesent nec orci at nulla consequat congue ut non arcu.\nVivamus vitae arcu vel velit efficitur vestibulum vel in purus.\nFusce aliquet turpis at orci bibendum, non convallis justo tempor.\nInteger rutrum ante ",
+          "shippable": false,
+          "tax-category": "standard-taxable",
+          "default-sku": "69f61d3c7621c1fce04a2871",
+          "ec-product-type": "b6ccc1830db4b1babeb06a9ac5f6dd76",
+          "main-img": {
+            "fileId": "69f9ca389064591fc362f760",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca389064591fc362f760_Begonia%20planty-2.webp",
+            "alt": null
+          },
+          "is-trendy-plant": false,
+          "trendy-sort-order": null,
+          "top-selling": true,
+          "short-descr": "Donec eu felis at libero consequat sagittis a et urna. Praesent nec orci at nulla consequat congue ut non arcu.",
+          "image-gallery": [
+            {
+              "fileId": "6a18953d83e54d86cbd4289d",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a18953d83e54d86cbd4289d_Begonia%20planty-3.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a18953d413dc05d2d18e7fb",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a18953d413dc05d2d18e7fb_Begonia%20planty-4.webp",
+              "alt": null
+            },
+            {
+              "fileId": "69f9ca389064591fc362f760",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca389064591fc362f760_Begonia%20planty-2.webp",
+              "alt": null
+            }
+          ],
+          "moisture-needs": 5,
+          "name": "Begonia",
+          "slug": "begonia"
+        }
+      },
+      {
+        "id": "69f61d3b7621c1fce04a279f",
+        "fieldData": {
+          "sku-properties": [],
+          "category": [
+            "69f61d321328190e3425c2bc",
+            "69f61d321328190e3425c2b6"
+          ],
+          "description": "Fusce aliquet turpis at orci bibendum, non convallis justo tempor.\nCras sit amet velit id nulla tempus dictum sit amet eu nisi.\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\nDonec eu felis at libero consequat sagittis a et urna.\nLorem ipsum dolor sit amet, consectetur adipiscing",
+          "shippable": true,
+          "tax-category": "standard-taxable",
+          "default-sku": "69f61d3c7621c1fce04a2844",
+          "ec-product-type": "b6ccc1830db4b1babeb06a9ac5f6dd76",
+          "main-img": {
+            "fileId": "69f9ca5c31e0d16cf89eee10",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca5c31e0d16cf89eee10_Croton-planty-2.webp",
+            "alt": null
+          },
+          "is-trendy-plant": true,
+          "trendy-sort-order": 2,
+          "top-selling": true,
+          "short-descr": "Fusce aliquet turpis at orci bibendum, non convallis justo tempor. Cras sit amet velit id nulla tempus dictum.",
+          "image-gallery": [
+            {
+              "fileId": "69f9ca5c31e0d16cf89eee10",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca5c31e0d16cf89eee10_Croton-planty-2.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1895a8eeb0c754722a6d37",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1895a8eeb0c754722a6d37_Croton-planty-3.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1895a8d6bdea8424fb5542",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1895a8d6bdea8424fb5542_Croton-planty-4.webp",
+              "alt": null
+            }
+          ],
+          "moisture-needs": 5,
+          "name": "Croton",
+          "slug": "croton"
+        }
+      },
+      {
+        "id": "69f61d3b7621c1fce04a279d",
+        "fieldData": {
+          "sku-properties": [],
+          "category": [
+            "69f61d321328190e3425c2ba",
+            "69f61d321328190e3425c2b6"
+          ],
+          "description": "Praesent nec orci at nulla consequat congue ut non arcu.\nInteger rutrum ante et nunc venenatis, id ultricies risus ultricies.\nSed auctor augue id tellus lacinia, nec ultricies est fermentum.\nFusce aliquet turpis at orci bibendum, non convallis j",
+          "shippable": false,
+          "tax-category": "standard-taxable",
+          "default-sku": "69f61d3c7621c1fce04a2842",
+          "ec-product-type": "b6ccc1830db4b1babeb06a9ac5f6dd76",
+          "main-img": {
+            "fileId": "69f9ca81c8d39aad721be253",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca81c8d39aad721be253_Peperomia%20planty-2.webp",
+            "alt": null
+          },
+          "is-trendy-plant": false,
+          "trendy-sort-order": null,
+          "top-selling": false,
+          "short-descr": "Praesent nec orci at nulla consequat congue ut non arcu. Integer rutrum ante et nunc venenatis, id ultricies risus ultr",
+          "image-gallery": [
+            {
+              "fileId": "6a1895c24097f49cc7e57f03",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1895c24097f49cc7e57f03_Peperomia%20planty-3.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1895c24df0c015c7b33b09",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1895c24df0c015c7b33b09_Peperomia%20planty-4.webp",
+              "alt": null
+            },
+            {
+              "fileId": "69f9ca81c8d39aad721be253",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca81c8d39aad721be253_Peperomia%20planty-2.webp",
+              "alt": null
+            }
+          ],
+          "moisture-needs": 8,
+          "name": "Peperomia",
+          "slug": "peperomia"
+        }
+      },
+      {
+        "id": "69f61d3b7621c1fce04a279b",
+        "fieldData": {
+          "sku-properties": [],
+          "category": [
+            "69f61d321328190e3425c2ba",
+            "69f61d321328190e3425c2b6"
+          ],
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDonec eu felis at libero consequat sagittis a et urna.\nVestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.\nDonec eu felis at libero consequat sagittis a et urna.\nVestibulum ante ipsum primis in f",
+          "shippable": true,
+          "tax-category": "standard-taxable",
+          "default-sku": "69f61d3c7621c1fce04a2851",
+          "ec-product-type": "b6ccc1830db4b1babeb06a9ac5f6dd76",
+          "main-img": {
+            "fileId": "69f9caa7345dc85a7928bf4b",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9caa7345dc85a7928bf4b_Dieffenbachia%20planty-2.webp",
+            "alt": null
+          },
+          "is-trendy-plant": false,
+          "trendy-sort-order": null,
+          "top-selling": true,
+          "short-descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis at libero consequat sagittis a et urna.",
+          "image-gallery": [
+            {
+              "fileId": "6a1895e862cfe83f95e4325c",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1895e862cfe83f95e4325c_Dieffenbachia%20planty-3.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a1895e8da05636672db86c3",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a1895e8da05636672db86c3_Dieffenbachia%20planty-4.webp",
+              "alt": null
+            },
+            {
+              "fileId": "69f9caa7345dc85a7928bf4b",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9caa7345dc85a7928bf4b_Dieffenbachia%20planty-2.webp",
+              "alt": null
+            }
+          ],
+          "moisture-needs": 9,
+          "name": "Dieffenbachia",
+          "slug": "dieffenbachia"
+        }
+      },
+      {
+        "id": "69f61d3b7621c1fce04a2799",
+        "fieldData": {
+          "sku-properties": [],
+          "category": null,
+          "description": "Maecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum maximus.\nCras sit amet velit id nulla tempus dictum sit amet eu nisi.\nCras sit amet velit id nulla tempus dictum sit amet eu nisi.\nPraesent nec orci",
+          "shippable": false,
+          "tax-category": "standard-taxable",
+          "default-sku": "69f61d3c7621c1fce04a2869",
+          "ec-product-type": "b6ccc1830db4b1babeb06a9ac5f6dd76",
+          "main-img": {
+            "fileId": "69f9cae678bc224ac96b1107",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9cae678bc224ac96b1107_Anthurium%20planty-2.webp",
+            "alt": null
+          },
+          "is-trendy-plant": false,
+          "trendy-sort-order": null,
+          "top-selling": true,
+          "short-descr": "Maecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum maximus. Cras sit amet velit id nulla tempus .",
+          "image-gallery": [
+            {
+              "fileId": "6a18960ada05636672db93d7",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a18960ada05636672db93d7_Anthurium%20planty-3.webp",
+              "alt": null
+            },
+            {
+              "fileId": "6a18960ace8afd4548652e3e",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/6a18960ace8afd4548652e3e_Anthurium%20planty-4.webp",
+              "alt": null
+            },
+            {
+              "fileId": "69f9cae678bc224ac96b1107",
+              "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9cae678bc224ac96b1107_Anthurium%20planty-2.webp",
+              "alt": null
+            }
+          ],
+          "moisture-needs": 6,
+          "name": "Anthurium",
+          "slug": "anthurium"
+        }
+      }
+    ]
+  },
+  {
+    "schema": {
+      "slug": "sku",
+      "displayName": "SKUs"
+    },
+    "items": [
+      {
+        "id": "69f61d3c7621c1fce04a288d",
+        "fieldData": {
+          "sku-values": {},
+          "product": "69f61d3b7621c1fce04a27a5",
+          "main-image": {
+            "fileId": "69f9ca135cc6be793cac11de",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca135cc6be793cac11de_Dracaena%20planty-2.webp",
+            "alt": null
+          },
+          "more-images": [],
+          "price": {
+            "unit": "EUR",
+            "value": 7039
+          },
+          "compare-at-price": {
+            "unit": "EUR",
+            "value": 322295
+          },
+          "download-files": [],
+          "ec-sku-subscription-plan": null,
+          "width": 66,
+          "length": 93,
+          "height": 4,
+          "weight": 90,
+          "sku": null,
+          "ec-sku-billing-method": null,
+          "name": "Dracaena",
+          "slug": "dracaena"
+        }
+      },
+      {
+        "id": "69f61d3c7621c1fce04a2871",
+        "fieldData": {
+          "sku-values": {},
+          "product": "69f61d3b7621c1fce04a27a1",
+          "main-image": {
+            "fileId": "69f9ca389064591fc362f760",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca389064591fc362f760_Begonia%20planty-2.webp",
+            "alt": null
+          },
+          "more-images": [],
+          "price": {
+            "unit": "EUR",
+            "value": 8850
+          },
+          "compare-at-price": {
+            "unit": "EUR",
+            "value": 53433
+          },
+          "download-files": [],
+          "ec-sku-subscription-plan": null,
+          "width": 25,
+          "length": 28,
+          "height": 41,
+          "weight": 31,
+          "sku": null,
+          "ec-sku-billing-method": null,
+          "name": "Begonia",
+          "slug": "begonia"
+        }
+      },
+      {
+        "id": "69f61d3c7621c1fce04a2869",
+        "fieldData": {
+          "sku-values": {},
+          "product": "69f61d3b7621c1fce04a2799",
+          "main-image": {
+            "fileId": "69f9cae678bc224ac96b1107",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9cae678bc224ac96b1107_Anthurium%20planty-2.webp",
+            "alt": null
+          },
+          "more-images": [],
+          "price": {
+            "unit": "EUR",
+            "value": 5975
+          },
+          "compare-at-price": {
+            "unit": "EUR",
+            "value": 359005
+          },
+          "download-files": [],
+          "ec-sku-subscription-plan": null,
+          "width": 18,
+          "length": 72,
+          "height": 66,
+          "weight": 60,
+          "sku": null,
+          "ec-sku-billing-method": null,
+          "name": "Anthurium",
+          "slug": "anthurium"
+        }
+      },
+      {
+        "id": "69f61d3c7621c1fce04a2862",
+        "fieldData": {
+          "sku-values": {},
+          "product": "69f61d3b7621c1fce04a27a7",
+          "main-image": {
+            "fileId": "69f9c9e7e9bc2ec60810028a",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9c9e7e9bc2ec60810028a_Alocasia%20planty-2.webp",
+            "alt": null
+          },
+          "more-images": [],
+          "price": {
+            "unit": "EUR",
+            "value": 3590
+          },
+          "compare-at-price": {
+            "unit": "EUR",
+            "value": 3900000
+          },
+          "download-files": [],
+          "ec-sku-subscription-plan": null,
+          "width": 70,
+          "length": 73,
+          "height": 42,
+          "weight": 66,
+          "sku": null,
+          "ec-sku-billing-method": null,
+          "name": "Alocasia",
+          "slug": "alocasia"
+        }
+      },
+      {
+        "id": "69f61d3c7621c1fce04a2851",
+        "fieldData": {
+          "sku-values": {},
+          "product": "69f61d3b7621c1fce04a279b",
+          "main-image": {
+            "fileId": "69f9caa7345dc85a7928bf4b",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9caa7345dc85a7928bf4b_Dieffenbachia%20planty-2.webp",
+            "alt": null
+          },
+          "more-images": [],
+          "price": {
+            "unit": "EUR",
+            "value": 4633
+          },
+          "compare-at-price": {
+            "unit": "EUR",
+            "value": 31101
+          },
+          "download-files": [],
+          "ec-sku-subscription-plan": null,
+          "width": 55,
+          "length": 42,
+          "height": 88,
+          "weight": 51,
+          "sku": null,
+          "ec-sku-billing-method": null,
+          "name": "Dieffenbachia",
+          "slug": "dieffenbachia"
+        }
+      },
+      {
+        "id": "69f61d3c7621c1fce04a2844",
+        "fieldData": {
+          "sku-values": {},
+          "product": "69f61d3b7621c1fce04a279f",
+          "main-image": {
+            "fileId": "69f9ca5c31e0d16cf89eee10",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca5c31e0d16cf89eee10_Croton-planty-2.webp",
+            "alt": null
+          },
+          "more-images": [],
+          "price": {
+            "unit": "EUR",
+            "value": 4769
+          },
+          "compare-at-price": {
+            "unit": "EUR",
+            "value": 807976
+          },
+          "download-files": [],
+          "ec-sku-subscription-plan": null,
+          "width": 59,
+          "length": 99,
+          "height": 94,
+          "weight": 18,
+          "sku": null,
+          "ec-sku-billing-method": null,
+          "name": "Croton",
+          "slug": "croton"
+        }
+      },
+      {
+        "id": "69f61d3c7621c1fce04a2842",
+        "fieldData": {
+          "sku-values": {},
+          "product": "69f61d3b7621c1fce04a279d",
+          "main-image": {
+            "fileId": "69f9ca81c8d39aad721be253",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f9ca81c8d39aad721be253_Peperomia%20planty-2.webp",
+            "alt": null
+          },
+          "more-images": [],
+          "price": {
+            "unit": "EUR",
+            "value": 8057
+          },
+          "compare-at-price": {
+            "unit": "EUR",
+            "value": 470548
+          },
+          "download-files": [],
+          "ec-sku-subscription-plan": null,
+          "width": 9,
+          "length": 64,
+          "height": 20,
+          "weight": 80,
+          "sku": null,
+          "ec-sku-billing-method": null,
+          "name": "Peperomia",
+          "slug": "peperomia"
+        }
+      },
+      {
+        "id": "69f61d3c7621c1fce04a2840",
+        "fieldData": {
+          "sku-values": {},
+          "product": "69f61d3b7621c1fce04a27ae",
+          "main-image": {
+            "fileId": "69f8d12c2ffb14575b8f134b",
+            "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f8d12c2ffb14575b8f134b_planty-3.webp.png",
+            "alt": null
+          },
+          "more-images": [],
+          "price": {
+            "unit": "EUR",
+            "value": 7911
+          },
+          "compare-at-price": {
+            "unit": "EUR",
+            "value": 904986
+          },
+          "download-files": [],
+          "ec-sku-subscription-plan": null,
+          "width": 37,
+          "length": 38,
+          "height": 49,
+          "weight": 24,
+          "sku": null,
+          "ec-sku-billing-method": null,
+          "name": "Echinocactus",
+          "slug": "echinocactus"
+        }
+      }
+    ]
+  }
+]
