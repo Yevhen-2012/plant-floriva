@@ -7,6 +7,7 @@ const output = path.join(root, 'dist');
 const manifest = JSON.parse(await fs.readFile(path.join(root, 'data/capture.json'), 'utf8'));
 for (const url of Object.keys(manifest.assets)) if (new URL(url).hostname === 'www.google.com' && new URL(url).pathname.startsWith('/maps/embed')) delete manifest.assets[url];
 const collections = JSON.parse(await fs.readFile(path.join(root, 'content/collections.json'), 'utf8'));
+const assistantTemplate = await fs.readFile(path.join(root, 'templates/assistant.html'), 'utf8');
 const collection = name => collections.find(item => item.schema.slug === name)?.items ?? [];
 await fs.mkdir(output, { recursive: true });
 await fs.cp(path.join(root, 'assets'), path.join(output, 'assets'), { recursive: true });
@@ -139,6 +140,12 @@ for (const route of routes) {
   });
   $('[srcset]').each((_, element) => { const el = $(element); el.attr('srcset', el.attr('srcset').split(',').map(part => { const [url,...sizes] = part.trim().split(/\s+/); return [localUrl(url, from),...sizes].join(' '); }).join(', ')); });
   $('body').append(`<dialog class="plant-cart" id="plant-cart" aria-labelledby="plant-cart-title"><div class="plant-cart-header"><h2 id="plant-cart-title">Your Cart</h2><button type="button" data-close-cart aria-label="Close cart">✕</button></div><div data-cart-items></div><div class="plant-cart-total"><span>Subtotal</span><strong data-cart-total>€0.00</strong></div><p class="plant-cart-note">Your selection is saved in this browser. Online checkout is not available yet.</p><div class="plant-cart-links"><a href="${localUrl('/shop',from)}">Continue shopping</a><a href="${localUrl('/contact',from)}">Contact us</a></div></dialog><script src="${relative(from, 'js/runtime.js')}"></script>`);
+  $('head').append(`<link rel="stylesheet" href="${relative(from, 'js/assistant.css')}">`);
+  $('body').append(assistantTemplate
+    .replaceAll('{{plantImage}}', relative(from, 'assets/0b22c5690e7e-69f9c9e7e9bc2ec60810028a_Alocasia-planty-2-p-500.webp'))
+    .replaceAll('{{shopUrl}}', localUrl('/shop', from))
+    .replaceAll('{{blogUrl}}', localUrl('/blog', from)));
+  $('body').append(`<script src="${relative(from, 'js/assistant.js')}"></script>`);
   html = replaceAssets($.html(), from);
   await fs.mkdir(path.dirname(path.join(output, from)), { recursive: true });
   await fs.writeFile(path.join(output, from), html);
