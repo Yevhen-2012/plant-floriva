@@ -6,7 +6,7 @@ body .button-main_btn,body .video-link,body .nav-ico-link-search{transition-dura
 .footer__text-field{color:#fff;caret-color:#fff}
 .footer__text-field::placeholder{color:#fff;opacity:1}
 /* Preserve the lightweight background underneath the decoded desktop upgrade. */
-.plant-background-hires{opacity:0;pointer-events:none;transition:opacity 900ms ease}
+.plant-background-hires{opacity:0;pointer-events:none;transition:opacity 1300ms ease}
 .plant-background-hires.is-ready{opacity:1}
 @media(prefers-reduced-motion:reduce){.plant-background-hires{transition:none}}
 /* The first screen must be visible before JavaScript finishes loading. */
