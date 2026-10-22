@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { load } from 'cheerio';
 
 const root = path.resolve(import.meta.dirname, '..');
@@ -8,6 +9,11 @@ const manifest = JSON.parse(await fs.readFile(path.join(root, 'data/capture.json
 for (const url of Object.keys(manifest.assets)) if (new URL(url).hostname === 'www.google.com' && new URL(url).pathname.startsWith('/maps/embed')) delete manifest.assets[url];
 const collections = JSON.parse(await fs.readFile(path.join(root, 'content/collections.json'), 'utf8'));
 const assistantTemplate = await fs.readFile(path.join(root, 'templates/assistant.html'), 'utf8');
+const revisedAssets = await Promise.all([
+  ['assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js', 'assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js'],
+  ['js/migration.css', 'public/migration.css'],
+  ['js/assistant.css', 'public/assistant.css']
+].map(async ([file, source]) => [file, createHash('sha256').update(await fs.readFile(path.join(root, source))).digest('hex').slice(0, 10)]));
 const collection = name => collections.find(item => item.schema.slug === name)?.items ?? [];
 await fs.mkdir(output, { recursive: true });
 await fs.cp(path.join(root, 'assets'), path.join(output, 'assets'), { recursive: true });
@@ -146,6 +152,13 @@ for (const route of routes) {
     .replaceAll('{{shopUrl}}', localUrl('/shop', from))
     .replaceAll('{{blogUrl}}', localUrl('/blog', from)));
   $('body').append(`<script src="${relative(from, 'js/assistant.js')}"></script>`);
+  for (const [file, revision] of revisedAssets) {
+    const url = relative(from, file);
+    $('script[src],link[href]').each((_, element) => {
+      const el = $(element), attr = el.is('script') ? 'src' : 'href';
+      if (el.attr(attr) === url) el.attr(attr, `${url}?v=${revision}`);
+    });
+  }
   html = replaceAssets($.html(), from);
   await fs.mkdir(path.dirname(path.join(output, from)), { recursive: true });
   await fs.writeFile(path.join(output, from), html);
