@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/check.mjs",
+    "test": "node --test",
     "start": "node scripts/serve.mjs",
     "import:webflow": "node scripts/import-webflow.mjs"
   },

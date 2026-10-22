@@ -28,8 +28,15 @@ function walk(dir) {
       const preload = $('link[rel="preload"][as="image"]');
       if (preload.length !== 1 || preload.attr('imagesrcset') !== gallery.first().attr('srcset') || preload.attr('imagesizes') !== gallery.first().attr('sizes')) errors.push(`${path.relative(root,file)}: gallery preload does not match the responsive image`);
     }
-    $('[href],[src],[poster],[data-plant-src]').each((_, el) => {
-      for (const a of ['href','src','poster','data-plant-src']) check($(el).attr(a),file);
+    const background = $('img[data-plant-background-src]');
+    if (background.length) {
+      const large = background.attr('data-plant-background-src');
+      if ($('img[src],source[srcset],link[rel="preload"]').toArray().some(el =>
+        ['src', 'srcset', 'href', 'imagesrcset'].some(attr => ($(el).attr(attr) ?? '').includes(large)))) errors.push(`${path.relative(root,file)}: full background loads before the first screen`);
+      if (!$('script[src]').toArray().some(el => /\/background\.js\?v=/.test($(el).attr('src')))) errors.push(`${path.relative(root,file)}: missing background loader`);
+    }
+    $('[href],[src],[poster],[data-plant-src],[data-plant-background-src]').each((_, el) => {
+      for (const a of ['href','src','poster','data-plant-src','data-plant-background-src']) check($(el).attr(a),file);
       if ($(el).attr('src')?.startsWith('https:') && !$(el).is('iframe')) errors.push(`Remote resource: ${$(el).attr('src')}`);
     });
     $('[srcset],[imagesrcset]').each((_,el) => ($(el).attr('srcset') ?? $(el).attr('imagesrcset')).split(',').forEach(part => check(part.trim().split(/\s+/)[0],file)));

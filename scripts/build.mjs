@@ -18,7 +18,8 @@ const revisedAssets = await Promise.all([
   ['assets/fonts/inter.css', 'assets/fonts/inter.css'],
   ['assets/79095fa76cdd-home.js', 'assets/79095fa76cdd-home.js'],
   ['js/product.js', 'public/product.js'],
-  ['js/video.js', 'public/video.js']
+  ['js/video.js', 'public/video.js'],
+  ['js/background.js', 'public/background.js']
 ].map(async ([file, source]) => [file, createHash('sha256').update(await fs.readFile(path.join(root, source))).digest('hex').slice(0, 10)]));
 const collection = name => collections.find(item => item.schema.slug === name)?.items ?? [];
 await fs.mkdir(output, { recursive: true });
@@ -175,6 +176,12 @@ for (const route of routes) {
   $('body').append(`<script src="${relative(from, 'js/assistant.js')}"></script>`);
   if ($('video[data-plant-video]').length) $('body').append(`<script src="${relative(from, 'js/video.js')}"></script>`);
   responsiveImages($, from, imageManifest);
+  const background = $('img.background-img').first();
+  if (background.length) {
+    // Metadata only: the large image must not compete with the first screen.
+    background.attr('data-plant-background-src', relative(from, 'assets/floriva-background-smooth-3840x1920-0dcabad1f9.webp'));
+    $('body').append(`<script src="${relative(from, 'js/background.js')}"></script>`);
+  }
   const firstProductImage = $('.product__swiper-wrapper .swiper-img').first();
   if (firstProductImage.length) {
     firstProductImage.attr({ loading: 'eager', fetchpriority: 'high' });
