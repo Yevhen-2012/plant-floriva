@@ -1,0 +1,2090 @@
+{
+  "assets/011a53af12fb-69f9d0ef0ffa1cefc3f1ed3f_Emily-Davis.webp": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "file": "assets/responsive/6451a184acb9-96.webp",
+        "width": 96,
+        "height": 96,
+        "bytes": 2234
+      },
+      {
+        "file": "assets/responsive/6451a184acb9-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 4620
+      },
+      {
+        "file": "assets/responsive/6451a184acb9-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 12598
+      },
+      {
+        "file": "assets/responsive/6451a184acb9-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 23982
+      },
+      {
+        "file": "assets/responsive/6451a184acb9-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 39392
+      },
+      {
+        "file": "assets/responsive/6451a184acb9-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 75808
+      },
+      {
+        "file": "assets/011a53af12fb-69f9d0ef0ffa1cefc3f1ed3f_Emily-Davis.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 99942
+      }
+    ]
+  },
+  "assets/021953adb952-69f9c9e7e9bc2ec60810028a_Alocasia-planty-2.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/0f9545b74b21-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6578
+      },
+      {
+        "file": "assets/responsive/0f9545b74b21-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 14602
+      },
+      {
+        "file": "assets/responsive/0f9545b74b21-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 46494
+      },
+      {
+        "file": "assets/responsive/0f9545b74b21-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 94042
+      },
+      {
+        "file": "assets/021953adb952-69f9c9e7e9bc2ec60810028a_Alocasia-planty-2.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 142998
+      }
+    ]
+  },
+  "assets/03b9e6ab7102-6a37c21c6a55fb730e22762f_background-mobile.webp": {
+    "width": 1279,
+    "height": 1535,
+    "variants": [
+      {
+        "file": "assets/responsive/d437b188f1cd-96.webp",
+        "width": 96,
+        "height": 115,
+        "bytes": 3468
+      },
+      {
+        "file": "assets/responsive/d437b188f1cd-160.webp",
+        "width": 160,
+        "height": 192,
+        "bytes": 8264
+      },
+      {
+        "file": "assets/responsive/d437b188f1cd-320.webp",
+        "width": 320,
+        "height": 384,
+        "bytes": 26966
+      },
+      {
+        "file": "assets/responsive/d437b188f1cd-480.webp",
+        "width": 480,
+        "height": 576,
+        "bytes": 51918
+      },
+      {
+        "file": "assets/03b9e6ab7102-6a37c21c6a55fb730e22762f_background-mobile.webp",
+        "width": 1279,
+        "height": 1535,
+        "bytes": 78302
+      }
+    ]
+  },
+  "assets/082a92fef33b-69fa410ef2e424eaaa53f584_22.jpg": {
+    "width": 2048,
+    "height": 1366,
+    "variants": [
+      {
+        "file": "assets/responsive/3a0133926e7c-96.webp",
+        "width": 96,
+        "height": 64,
+        "bytes": 1970
+      },
+      {
+        "file": "assets/responsive/3a0133926e7c-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 4706
+      },
+      {
+        "file": "assets/responsive/3a0133926e7c-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 13944
+      },
+      {
+        "file": "assets/responsive/3a0133926e7c-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 25086
+      },
+      {
+        "file": "assets/responsive/3a0133926e7c-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 37204
+      },
+      {
+        "file": "assets/responsive/3a0133926e7c-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 63742
+      },
+      {
+        "file": "assets/responsive/3a0133926e7c-1280.webp",
+        "width": 1280,
+        "height": 854,
+        "bytes": 89600
+      },
+      {
+        "file": "assets/082a92fef33b-69fa410ef2e424eaaa53f584_22.jpg",
+        "width": 2048,
+        "height": 1366,
+        "bytes": 194554
+      }
+    ]
+  },
+  "assets/0dc20253437b-69fc46aea478c1d88e29013e_blog-1_1.webp": {
+    "width": 1202,
+    "height": 1464,
+    "variants": [
+      {
+        "file": "assets/responsive/669251048e69-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 4608
+      },
+      {
+        "file": "assets/responsive/669251048e69-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 9494
+      },
+      {
+        "file": "assets/responsive/669251048e69-320.webp",
+        "width": 320,
+        "height": 390,
+        "bytes": 28686
+      },
+      {
+        "file": "assets/responsive/669251048e69-480.webp",
+        "width": 480,
+        "height": 585,
+        "bytes": 55656
+      },
+      {
+        "file": "assets/responsive/669251048e69-640.webp",
+        "width": 640,
+        "height": 780,
+        "bytes": 91036
+      },
+      {
+        "file": "assets/responsive/669251048e69-960.webp",
+        "width": 960,
+        "height": 1169,
+        "bytes": 181870
+      },
+      {
+        "file": "assets/0dc20253437b-69fc46aea478c1d88e29013e_blog-1_1.webp",
+        "width": 1202,
+        "height": 1464,
+        "bytes": 195712
+      }
+    ]
+  },
+  "assets/11c8229398fe-69f9d11047990f9512c679f9_John-Brown.webp": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "file": "assets/responsive/b0819996306d-96.webp",
+        "width": 96,
+        "height": 96,
+        "bytes": 1876
+      },
+      {
+        "file": "assets/responsive/b0819996306d-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3628
+      },
+      {
+        "file": "assets/responsive/b0819996306d-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 9526
+      },
+      {
+        "file": "assets/responsive/b0819996306d-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 18236
+      },
+      {
+        "file": "assets/responsive/b0819996306d-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 31304
+      },
+      {
+        "file": "assets/responsive/b0819996306d-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 62778
+      },
+      {
+        "file": "assets/11c8229398fe-69f9d11047990f9512c679f9_John-Brown.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 82134
+      }
+    ]
+  },
+  "assets/12acf91566e1-Kx84QjL75ZFZzqmdFH78oQZ8Mu7R6fb3iP6hOHAkPnj-ODemJLqShyH4PV8ZWXtL949n5krs9KQeG4_yg1qlmX_JdlyWlY0.jpeg": {
+    "width": 1312,
+    "height": 736,
+    "variants": [
+      {
+        "file": "assets/responsive/1ddd39f53371-96.webp",
+        "width": 96,
+        "height": 54,
+        "bytes": 2162
+      },
+      {
+        "file": "assets/responsive/1ddd39f53371-160.webp",
+        "width": 160,
+        "height": 90,
+        "bytes": 4710
+      },
+      {
+        "file": "assets/responsive/1ddd39f53371-320.webp",
+        "width": 320,
+        "height": 180,
+        "bytes": 14078
+      },
+      {
+        "file": "assets/responsive/1ddd39f53371-480.webp",
+        "width": 480,
+        "height": 269,
+        "bytes": 26362
+      },
+      {
+        "file": "assets/responsive/1ddd39f53371-640.webp",
+        "width": 640,
+        "height": 359,
+        "bytes": 41634
+      },
+      {
+        "file": "assets/responsive/1ddd39f53371-960.webp",
+        "width": 960,
+        "height": 539,
+        "bytes": 75798
+      },
+      {
+        "file": "assets/12acf91566e1-Kx84QjL75ZFZzqmdFH78oQZ8Mu7R6fb3iP6hOHAkPnj-ODemJLqShyH4PV8ZWXtL949n5krs9KQeG4_yg1qlmX_JdlyWlY0.jpeg",
+        "width": 1312,
+        "height": 736,
+        "bytes": 91481
+      }
+    ]
+  },
+  "assets/1a70b9118264-69f9cae678bc224ac96b1107_Anthurium-planty-2.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/fa3b3c67a718-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5592
+      },
+      {
+        "file": "assets/responsive/fa3b3c67a718-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 12848
+      },
+      {
+        "file": "assets/responsive/fa3b3c67a718-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 40284
+      },
+      {
+        "file": "assets/responsive/fa3b3c67a718-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 82672
+      },
+      {
+        "file": "assets/1a70b9118264-69f9cae678bc224ac96b1107_Anthurium-planty-2.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 128798
+      }
+    ]
+  },
+  "assets/1c4384986f77-69f9caa7345dc85a7928bf4b_Dieffenbachia-planty-2.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/b06c7428d68f-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5776
+      },
+      {
+        "file": "assets/responsive/b06c7428d68f-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 12036
+      },
+      {
+        "file": "assets/responsive/b06c7428d68f-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 38700
+      },
+      {
+        "file": "assets/responsive/b06c7428d68f-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 78400
+      },
+      {
+        "file": "assets/1c4384986f77-69f9caa7345dc85a7928bf4b_Dieffenbachia-planty-2.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 108938
+      }
+    ]
+  },
+  "assets/1d07e2670f4b-69fa41325651d9eef7b4782b_41.jpg": {
+    "width": 1080,
+    "height": 1350,
+    "variants": [
+      {
+        "file": "assets/responsive/7034631c8604-96.webp",
+        "width": 96,
+        "height": 120,
+        "bytes": 4576
+      },
+      {
+        "file": "assets/responsive/7034631c8604-160.webp",
+        "width": 160,
+        "height": 200,
+        "bytes": 10574
+      },
+      {
+        "file": "assets/responsive/7034631c8604-320.webp",
+        "width": 320,
+        "height": 400,
+        "bytes": 30966
+      },
+      {
+        "file": "assets/responsive/7034631c8604-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 57970
+      },
+      {
+        "file": "assets/responsive/7034631c8604-640.webp",
+        "width": 640,
+        "height": 800,
+        "bytes": 87476
+      },
+      {
+        "file": "assets/1d07e2670f4b-69fa41325651d9eef7b4782b_41.jpg",
+        "width": 1080,
+        "height": 1350,
+        "bytes": 123728
+      }
+    ]
+  },
+  "assets/1d8e58be5e69-6a18953d83e54d86cbd4289d_Begonia-planty-3.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/457d68b093a1-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5992
+      },
+      {
+        "file": "assets/responsive/457d68b093a1-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 14374
+      },
+      {
+        "file": "assets/responsive/457d68b093a1-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 44940
+      },
+      {
+        "file": "assets/responsive/457d68b093a1-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 93584
+      },
+      {
+        "file": "assets/responsive/457d68b093a1-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 161214
+      },
+      {
+        "file": "assets/1d8e58be5e69-6a18953d83e54d86cbd4289d_Begonia-planty-3.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 176100
+      }
+    ]
+  },
+  "assets/23f17124f34b-69f9ca5c31e0d16cf89eee10_Croton-planty-2.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/54f30f66bd2b-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5240
+      },
+      {
+        "file": "assets/responsive/54f30f66bd2b-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 11322
+      },
+      {
+        "file": "assets/responsive/54f30f66bd2b-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 34242
+      },
+      {
+        "file": "assets/responsive/54f30f66bd2b-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 72256
+      },
+      {
+        "file": "assets/23f17124f34b-69f9ca5c31e0d16cf89eee10_Croton-planty-2.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 103444
+      }
+    ]
+  },
+  "assets/2d8f52840f6c-69f8d12c2ffb14575b8f134b_planty-3.webp.png": {
+    "width": 1202,
+    "height": 1464,
+    "variants": [
+      {
+        "file": "assets/responsive/018e8d56c2db-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5762
+      },
+      {
+        "file": "assets/responsive/018e8d56c2db-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 13398
+      },
+      {
+        "file": "assets/responsive/018e8d56c2db-320.webp",
+        "width": 320,
+        "height": 390,
+        "bytes": 47204
+      },
+      {
+        "file": "assets/responsive/018e8d56c2db-480.webp",
+        "width": 480,
+        "height": 585,
+        "bytes": 104984
+      },
+      {
+        "file": "assets/responsive/018e8d56c2db-640.webp",
+        "width": 640,
+        "height": 780,
+        "bytes": 184520
+      },
+      {
+        "file": "assets/responsive/018e8d56c2db-960.webp",
+        "width": 960,
+        "height": 1169,
+        "bytes": 396072
+      },
+      {
+        "file": "assets/responsive/018e8d56c2db-1202.webp",
+        "width": 1202,
+        "height": 1464,
+        "bytes": 530640
+      }
+    ]
+  },
+  "assets/2fc624f8e65c-69fc7e0a439fb315c02a1507_footer_logo_comp.webp": {
+    "width": 300,
+    "height": 300,
+    "variants": [
+      {
+        "file": "assets/responsive/af9a8a6e43f7-96.webp",
+        "width": 96,
+        "height": 96,
+        "bytes": 4248
+      },
+      {
+        "file": "assets/responsive/af9a8a6e43f7-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 8478
+      },
+      {
+        "file": "assets/2fc624f8e65c-69fc7e0a439fb315c02a1507_footer_logo_comp.webp",
+        "width": 300,
+        "height": 300,
+        "bytes": 13668
+      }
+    ]
+  },
+  "assets/38e343ebc265-69f9ca81c8d39aad721be253_Peperomia-planty-2.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/7cd3dca780e7-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 4664
+      },
+      {
+        "file": "assets/responsive/7cd3dca780e7-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 9544
+      },
+      {
+        "file": "assets/responsive/7cd3dca780e7-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 30858
+      },
+      {
+        "file": "assets/responsive/7cd3dca780e7-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 61250
+      },
+      {
+        "file": "assets/38e343ebc265-69f9ca81c8d39aad721be253_Peperomia-planty-2.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 91086
+      }
+    ]
+  },
+  "assets/3d701e5bd749-6a1038d46a1a6a795a8f087f_Peperomia-planty-2.webp": {
+    "width": 1202,
+    "height": 1464,
+    "variants": [
+      {
+        "file": "assets/responsive/0c147da9e8c3-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 4704
+      },
+      {
+        "file": "assets/responsive/0c147da9e8c3-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 9518
+      },
+      {
+        "file": "assets/responsive/0c147da9e8c3-320.webp",
+        "width": 320,
+        "height": 390,
+        "bytes": 30996
+      },
+      {
+        "file": "assets/responsive/0c147da9e8c3-480.webp",
+        "width": 480,
+        "height": 585,
+        "bytes": 61548
+      },
+      {
+        "file": "assets/responsive/0c147da9e8c3-640.webp",
+        "width": 640,
+        "height": 780,
+        "bytes": 101768
+      },
+      {
+        "file": "assets/responsive/0c147da9e8c3-960.webp",
+        "width": 960,
+        "height": 1169,
+        "bytes": 202244
+      },
+      {
+        "file": "assets/3d701e5bd749-6a1038d46a1a6a795a8f087f_Peperomia-planty-2.webp",
+        "width": 1202,
+        "height": 1464,
+        "bytes": 444028
+      }
+    ]
+  },
+  "assets/4686ece07d1f-6a1895a8eeb0c754722a6d37_Croton-planty-3.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/7abd035da6a4-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6600
+      },
+      {
+        "file": "assets/responsive/7abd035da6a4-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 14324
+      },
+      {
+        "file": "assets/responsive/7abd035da6a4-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 46418
+      },
+      {
+        "file": "assets/responsive/7abd035da6a4-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 93360
+      },
+      {
+        "file": "assets/4686ece07d1f-6a1895a8eeb0c754722a6d37_Croton-planty-3.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 147392
+      }
+    ]
+  },
+  "assets/4b6ebe1b7676-6a1895c24097f49cc7e57f03_Peperomia-planty-3.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/564c1b120e80-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6252
+      },
+      {
+        "file": "assets/responsive/564c1b120e80-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 13550
+      },
+      {
+        "file": "assets/responsive/564c1b120e80-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 42030
+      },
+      {
+        "file": "assets/responsive/564c1b120e80-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 89266
+      },
+      {
+        "file": "assets/responsive/564c1b120e80-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 152612
+      },
+      {
+        "file": "assets/4b6ebe1b7676-6a1895c24097f49cc7e57f03_Peperomia-planty-3.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 157644
+      }
+    ]
+  },
+  "assets/4bdee03e3678-VBqz5fPKXazI_rFshFDdL570a1sYioS0J_SgLGfmjbBStDUYtC-kfu1Mbk9W0Hv2HYjZZJhzmTiemAC2c8dYHRCaQtsGsa4.jpeg": {
+    "width": 1248,
+    "height": 832,
+    "variants": [
+      {
+        "file": "assets/responsive/691ab1b14e3e-96.webp",
+        "width": 96,
+        "height": 64,
+        "bytes": 2140
+      },
+      {
+        "file": "assets/responsive/691ab1b14e3e-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 4306
+      },
+      {
+        "file": "assets/responsive/691ab1b14e3e-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 10694
+      },
+      {
+        "file": "assets/responsive/691ab1b14e3e-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 18258
+      },
+      {
+        "file": "assets/responsive/691ab1b14e3e-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 26268
+      },
+      {
+        "file": "assets/responsive/691ab1b14e3e-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 43966
+      },
+      {
+        "file": "assets/4bdee03e3678-VBqz5fPKXazI_rFshFDdL570a1sYioS0J_SgLGfmjbBStDUYtC-kfu1Mbk9W0Hv2HYjZZJhzmTiemAC2c8dYHRCaQtsGsa4.jpeg",
+        "width": 1248,
+        "height": 832,
+        "bytes": 76807
+      }
+    ]
+  },
+  "assets/4db400cf58c6-6a18960ada05636672db93d7_Anthurium-planty-3.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/712f4974b692-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6282
+      },
+      {
+        "file": "assets/responsive/712f4974b692-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 14450
+      },
+      {
+        "file": "assets/responsive/712f4974b692-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 43920
+      },
+      {
+        "file": "assets/responsive/712f4974b692-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 91162
+      },
+      {
+        "file": "assets/responsive/712f4974b692-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 153304
+      },
+      {
+        "file": "assets/4db400cf58c6-6a18960ada05636672db93d7_Anthurium-planty-3.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 166832
+      }
+    ]
+  },
+  "assets/50e819b3409e-6a1893c49a99f19804353e55_Alocasia-planty-4.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/9f936ea0c371-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5520
+      },
+      {
+        "file": "assets/responsive/9f936ea0c371-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 12178
+      },
+      {
+        "file": "assets/responsive/9f936ea0c371-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 37752
+      },
+      {
+        "file": "assets/responsive/9f936ea0c371-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 76988
+      },
+      {
+        "file": "assets/responsive/9f936ea0c371-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 127090
+      },
+      {
+        "file": "assets/50e819b3409e-6a1893c49a99f19804353e55_Alocasia-planty-4.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 128378
+      }
+    ]
+  },
+  "assets/55a5a33bda10-6a37c21b1cc38736b1d849d9_background-tablet.webp": {
+    "width": 1445,
+    "height": 1535,
+    "variants": [
+      {
+        "file": "assets/responsive/5ee9e0facd5c-96.webp",
+        "width": 96,
+        "height": 102,
+        "bytes": 2988
+      },
+      {
+        "file": "assets/responsive/5ee9e0facd5c-160.webp",
+        "width": 160,
+        "height": 170,
+        "bytes": 7248
+      },
+      {
+        "file": "assets/responsive/5ee9e0facd5c-320.webp",
+        "width": 320,
+        "height": 340,
+        "bytes": 23278
+      },
+      {
+        "file": "assets/responsive/5ee9e0facd5c-480.webp",
+        "width": 480,
+        "height": 510,
+        "bytes": 44854
+      },
+      {
+        "file": "assets/responsive/5ee9e0facd5c-640.webp",
+        "width": 640,
+        "height": 680,
+        "bytes": 70914
+      },
+      {
+        "file": "assets/55a5a33bda10-6a37c21b1cc38736b1d849d9_background-tablet.webp",
+        "width": 1445,
+        "height": 1535,
+        "bytes": 80416
+      }
+    ]
+  },
+  "assets/58cf388a36bf-69ff69ed5c825ebf55d76c8a_background_compres.webp": {
+    "width": 3072,
+    "height": 1536,
+    "variants": [
+      {
+        "file": "assets/responsive/65be3b5acfa4-96.webp",
+        "width": 96,
+        "height": 48,
+        "bytes": 918
+      },
+      {
+        "file": "assets/responsive/65be3b5acfa4-160.webp",
+        "width": 160,
+        "height": 80,
+        "bytes": 2024
+      },
+      {
+        "file": "assets/responsive/65be3b5acfa4-320.webp",
+        "width": 320,
+        "height": 160,
+        "bytes": 6590
+      },
+      {
+        "file": "assets/responsive/65be3b5acfa4-480.webp",
+        "width": 480,
+        "height": 240,
+        "bytes": 13136
+      },
+      {
+        "file": "assets/responsive/65be3b5acfa4-640.webp",
+        "width": 640,
+        "height": 320,
+        "bytes": 21396
+      },
+      {
+        "file": "assets/responsive/65be3b5acfa4-960.webp",
+        "width": 960,
+        "height": 480,
+        "bytes": 42588
+      },
+      {
+        "file": "assets/responsive/65be3b5acfa4-1280.webp",
+        "width": 1280,
+        "height": 640,
+        "bytes": 71940
+      },
+      {
+        "file": "assets/58cf388a36bf-69ff69ed5c825ebf55d76c8a_background_compres.webp",
+        "width": 3072,
+        "height": 1536,
+        "bytes": 240340
+      }
+    ]
+  },
+  "assets/5c3ab6b5b0a1-69fc4762423c9f0fe4c2d6a6_blog-5_5.webp": {
+    "width": 1202,
+    "height": 1464,
+    "variants": [
+      {
+        "file": "assets/responsive/592150bd6c92-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5676
+      },
+      {
+        "file": "assets/responsive/592150bd6c92-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 12160
+      },
+      {
+        "file": "assets/responsive/592150bd6c92-320.webp",
+        "width": 320,
+        "height": 390,
+        "bytes": 39352
+      },
+      {
+        "file": "assets/responsive/592150bd6c92-480.webp",
+        "width": 480,
+        "height": 585,
+        "bytes": 84456
+      },
+      {
+        "file": "assets/responsive/592150bd6c92-640.webp",
+        "width": 640,
+        "height": 780,
+        "bytes": 150876
+      },
+      {
+        "file": "assets/5c3ab6b5b0a1-69fc4762423c9f0fe4c2d6a6_blog-5_5.webp",
+        "width": 1202,
+        "height": 1464,
+        "bytes": 327740
+      }
+    ]
+  },
+  "assets/611b77061942-MJFI3KZ29dbfWI8gWVZSKWmlytJPsE36wuf0Nmq4uuV-kMNLIF_GigKq0qQp9SU0iUgGCW2RhRZpFl3LtEeCWSakqbN6gOI.jpeg": {
+    "width": 1100,
+    "height": 780,
+    "variants": [
+      {
+        "file": "assets/responsive/5acd2582d217-96.webp",
+        "width": 96,
+        "height": 68,
+        "bytes": 3094
+      },
+      {
+        "file": "assets/responsive/5acd2582d217-160.webp",
+        "width": 160,
+        "height": 113,
+        "bytes": 7198
+      },
+      {
+        "file": "assets/responsive/5acd2582d217-320.webp",
+        "width": 320,
+        "height": 227,
+        "bytes": 22080
+      },
+      {
+        "file": "assets/responsive/5acd2582d217-480.webp",
+        "width": 480,
+        "height": 340,
+        "bytes": 41304
+      },
+      {
+        "file": "assets/responsive/5acd2582d217-640.webp",
+        "width": 640,
+        "height": 454,
+        "bytes": 63132
+      },
+      {
+        "file": "assets/responsive/5acd2582d217-960.webp",
+        "width": 960,
+        "height": 681,
+        "bytes": 111528
+      },
+      {
+        "file": "assets/611b77061942-MJFI3KZ29dbfWI8gWVZSKWmlytJPsE36wuf0Nmq4uuV-kMNLIF_GigKq0qQp9SU0iUgGCW2RhRZpFl3LtEeCWSakqbN6gOI.jpeg",
+        "width": 1100,
+        "height": 780,
+        "bytes": 133312
+      }
+    ]
+  },
+  "assets/645b6620f586-6a1895e8da05636672db86c3_Dieffenbachia-planty-4.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/09030d914fd1-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6896
+      },
+      {
+        "file": "assets/responsive/09030d914fd1-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 14980
+      },
+      {
+        "file": "assets/responsive/09030d914fd1-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 45014
+      },
+      {
+        "file": "assets/responsive/09030d914fd1-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 91276
+      },
+      {
+        "file": "assets/responsive/09030d914fd1-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 151720
+      },
+      {
+        "file": "assets/645b6620f586-6a1895e8da05636672db86c3_Dieffenbachia-planty-4.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 155008
+      }
+    ]
+  },
+  "assets/67f542f63e0c-6a18953d413dc05d2d18e7fb_Begonia-planty-4.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/3ca5f891e300-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5686
+      },
+      {
+        "file": "assets/responsive/3ca5f891e300-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 13564
+      },
+      {
+        "file": "assets/responsive/3ca5f891e300-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 42726
+      },
+      {
+        "file": "assets/responsive/3ca5f891e300-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 88896
+      },
+      {
+        "file": "assets/responsive/3ca5f891e300-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 154248
+      },
+      {
+        "file": "assets/67f542f63e0c-6a18953d413dc05d2d18e7fb_Begonia-planty-4.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 166546
+      }
+    ]
+  },
+  "assets/6d86f08f3799-69f9d0df3493b0e44733eb36_Mark-Smith.webp": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "file": "assets/responsive/bab73cb41623-96.webp",
+        "width": 96,
+        "height": 96,
+        "bytes": 1896
+      },
+      {
+        "file": "assets/responsive/bab73cb41623-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3696
+      },
+      {
+        "file": "assets/responsive/bab73cb41623-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 9270
+      },
+      {
+        "file": "assets/responsive/bab73cb41623-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 17320
+      },
+      {
+        "file": "assets/responsive/bab73cb41623-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 30000
+      },
+      {
+        "file": "assets/responsive/bab73cb41623-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 61516
+      },
+      {
+        "file": "assets/6d86f08f3799-69f9d0df3493b0e44733eb36_Mark-Smith.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 81680
+      }
+    ]
+  },
+  "assets/6e465ecc3f0a-6a1894d49a197f5891402817_Dracaena-planty-3.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/acb1db2b84f7-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6676
+      },
+      {
+        "file": "assets/responsive/acb1db2b84f7-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 14850
+      },
+      {
+        "file": "assets/responsive/acb1db2b84f7-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 45404
+      },
+      {
+        "file": "assets/responsive/acb1db2b84f7-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 91156
+      },
+      {
+        "file": "assets/responsive/acb1db2b84f7-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 151696
+      },
+      {
+        "file": "assets/6e465ecc3f0a-6a1894d49a197f5891402817_Dracaena-planty-3.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 260686
+      }
+    ]
+  },
+  "assets/786c9488c72a-69fc46e311d660c7d76dbad3_blog-3_3.webp": {
+    "width": 1202,
+    "height": 1464,
+    "variants": [
+      {
+        "file": "assets/responsive/ab1a51a8424d-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5518
+      },
+      {
+        "file": "assets/responsive/ab1a51a8424d-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 11598
+      },
+      {
+        "file": "assets/responsive/ab1a51a8424d-320.webp",
+        "width": 320,
+        "height": 390,
+        "bytes": 34022
+      },
+      {
+        "file": "assets/responsive/ab1a51a8424d-480.webp",
+        "width": 480,
+        "height": 585,
+        "bytes": 67066
+      },
+      {
+        "file": "assets/responsive/ab1a51a8424d-640.webp",
+        "width": 640,
+        "height": 780,
+        "bytes": 111332
+      },
+      {
+        "file": "assets/responsive/ab1a51a8424d-960.webp",
+        "width": 960,
+        "height": 1169,
+        "bytes": 225614
+      },
+      {
+        "file": "assets/786c9488c72a-69fc46e311d660c7d76dbad3_blog-3_3.webp",
+        "width": 1202,
+        "height": 1464,
+        "bytes": 243008
+      }
+    ]
+  },
+  "assets/7aae58989447-6a1038d311a5a3d0e10a664f_planty-3.webp": {
+    "width": 858,
+    "height": 1045,
+    "variants": [
+      {
+        "file": "assets/responsive/e6efd27c961e-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5760
+      },
+      {
+        "file": "assets/responsive/e6efd27c961e-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 13168
+      },
+      {
+        "file": "assets/responsive/e6efd27c961e-320.webp",
+        "width": 320,
+        "height": 390,
+        "bytes": 46160
+      },
+      {
+        "file": "assets/responsive/e6efd27c961e-480.webp",
+        "width": 480,
+        "height": 585,
+        "bytes": 99598
+      },
+      {
+        "file": "assets/responsive/e6efd27c961e-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 171756
+      },
+      {
+        "file": "assets/7aae58989447-6a1038d311a5a3d0e10a664f_planty-3.webp",
+        "width": 858,
+        "height": 1045,
+        "bytes": 196506
+      }
+    ]
+  },
+  "assets/7fb3b19f4835-69fc46bb95c9f0749fb64116_blog-2_2.webp": {
+    "width": 1202,
+    "height": 1464,
+    "variants": [
+      {
+        "file": "assets/responsive/9334abd39716-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5510
+      },
+      {
+        "file": "assets/responsive/9334abd39716-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 11432
+      },
+      {
+        "file": "assets/responsive/9334abd39716-320.webp",
+        "width": 320,
+        "height": 390,
+        "bytes": 32660
+      },
+      {
+        "file": "assets/responsive/9334abd39716-480.webp",
+        "width": 480,
+        "height": 585,
+        "bytes": 68710
+      },
+      {
+        "file": "assets/responsive/9334abd39716-640.webp",
+        "width": 640,
+        "height": 780,
+        "bytes": 111508
+      },
+      {
+        "file": "assets/responsive/9334abd39716-960.webp",
+        "width": 960,
+        "height": 1169,
+        "bytes": 220580
+      },
+      {
+        "file": "assets/7fb3b19f4835-69fc46bb95c9f0749fb64116_blog-2_2.webp",
+        "width": 1202,
+        "height": 1464,
+        "bytes": 261512
+      }
+    ]
+  },
+  "assets/8be5dfd22cc1-6a1894d4119af5ce9f1bf9ab_Dracaena-planty-4.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/5d6e1d2e1601-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6282
+      },
+      {
+        "file": "assets/responsive/5d6e1d2e1601-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 13520
+      },
+      {
+        "file": "assets/responsive/5d6e1d2e1601-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 40662
+      },
+      {
+        "file": "assets/responsive/5d6e1d2e1601-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 81366
+      },
+      {
+        "file": "assets/responsive/5d6e1d2e1601-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 135140
+      },
+      {
+        "file": "assets/8be5dfd22cc1-6a1894d4119af5ce9f1bf9ab_Dracaena-planty-4.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 239492
+      }
+    ]
+  },
+  "assets/92be7c44bd7d-69fa4143cae326133c69a36f_54.jpg": {
+    "width": 640,
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/responsive/266fe0320d5a-96.webp",
+        "width": 96,
+        "height": 144,
+        "bytes": 4064
+      },
+      {
+        "file": "assets/responsive/266fe0320d5a-160.webp",
+        "width": 160,
+        "height": 240,
+        "bytes": 8568
+      },
+      {
+        "file": "assets/responsive/266fe0320d5a-320.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 24746
+      },
+      {
+        "file": "assets/responsive/266fe0320d5a-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 44748
+      },
+      {
+        "file": "assets/92be7c44bd7d-69fa4143cae326133c69a36f_54.jpg",
+        "width": 640,
+        "height": 960,
+        "bytes": 71305
+      }
+    ]
+  },
+  "assets/98f37aa77e17-6a1038d3796f840ea380c467_planty-2.webp": {
+    "width": 1202,
+    "height": 1464,
+    "variants": [
+      {
+        "file": "assets/responsive/f6c2f500841e-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5154
+      },
+      {
+        "file": "assets/responsive/f6c2f500841e-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 9876
+      },
+      {
+        "file": "assets/responsive/f6c2f500841e-320.webp",
+        "width": 320,
+        "height": 390,
+        "bytes": 24860
+      },
+      {
+        "file": "assets/responsive/f6c2f500841e-480.webp",
+        "width": 480,
+        "height": 585,
+        "bytes": 42462
+      },
+      {
+        "file": "assets/responsive/f6c2f500841e-640.webp",
+        "width": 640,
+        "height": 780,
+        "bytes": 58828
+      },
+      {
+        "file": "assets/responsive/f6c2f500841e-960.webp",
+        "width": 960,
+        "height": 1169,
+        "bytes": 86334
+      },
+      {
+        "file": "assets/98f37aa77e17-6a1038d3796f840ea380c467_planty-2.webp",
+        "width": 1202,
+        "height": 1464,
+        "bytes": 106508
+      }
+    ]
+  },
+  "assets/9fab05b11b50-6a1895e862cfe83f95e4325c_Dieffenbachia-planty-3.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/daa02d4df303-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6482
+      },
+      {
+        "file": "assets/responsive/daa02d4df303-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 15012
+      },
+      {
+        "file": "assets/responsive/daa02d4df303-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 44354
+      },
+      {
+        "file": "assets/responsive/daa02d4df303-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 90034
+      },
+      {
+        "file": "assets/responsive/daa02d4df303-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 150114
+      },
+      {
+        "file": "assets/9fab05b11b50-6a1895e862cfe83f95e4325c_Dieffenbachia-planty-3.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 154378
+      }
+    ]
+  },
+  "assets/a150148ddbcd-CldEaNQ3laVgZx6CAYgRo6LD0PtenxUNe-A7aik0ykCdU50vQ0SkSIIgpUvHoY-XPiN4A3vnW_v7VJ50MOYIoEAsMQo5Br0.jpeg": {
+    "width": 480,
+    "height": 336,
+    "variants": [
+      {
+        "file": "assets/responsive/d14244c9beb2-96.webp",
+        "width": 96,
+        "height": 67,
+        "bytes": 2514
+      },
+      {
+        "file": "assets/responsive/d14244c9beb2-160.webp",
+        "width": 160,
+        "height": 112,
+        "bytes": 5280
+      },
+      {
+        "file": "assets/responsive/d14244c9beb2-320.webp",
+        "width": 320,
+        "height": 224,
+        "bytes": 14224
+      },
+      {
+        "file": "assets/a150148ddbcd-CldEaNQ3laVgZx6CAYgRo6LD0PtenxUNe-A7aik0ykCdU50vQ0SkSIIgpUvHoY-XPiN4A3vnW_v7VJ50MOYIoEAsMQo5Br0.jpeg",
+        "width": 480,
+        "height": 336,
+        "bytes": 25867
+      }
+    ]
+  },
+  "assets/a754a3b92a23-6a1894d4d6fd6ba3d0036d1c_Dracaena-planty-5.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/f45ce16aa947-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6842
+      },
+      {
+        "file": "assets/responsive/f45ce16aa947-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 14750
+      },
+      {
+        "file": "assets/responsive/f45ce16aa947-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 45346
+      },
+      {
+        "file": "assets/responsive/f45ce16aa947-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 91622
+      },
+      {
+        "file": "assets/responsive/f45ce16aa947-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 151758
+      },
+      {
+        "file": "assets/a754a3b92a23-6a1894d4d6fd6ba3d0036d1c_Dracaena-planty-5.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 260286
+      }
+    ]
+  },
+  "assets/a7c442e9f8e7-69fa411f4161df8e5f8da4ba_31.jpg": {
+    "width": 700,
+    "height": 700,
+    "variants": [
+      {
+        "file": "assets/responsive/fcbd58d8ef3e-96.webp",
+        "width": 96,
+        "height": 96,
+        "bytes": 3678
+      },
+      {
+        "file": "assets/responsive/fcbd58d8ef3e-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 8068
+      },
+      {
+        "file": "assets/responsive/fcbd58d8ef3e-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 22140
+      },
+      {
+        "file": "assets/responsive/fcbd58d8ef3e-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 41382
+      },
+      {
+        "file": "assets/responsive/fcbd58d8ef3e-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 66040
+      },
+      {
+        "file": "assets/a7c442e9f8e7-69fa411f4161df8e5f8da4ba_31.jpg",
+        "width": 700,
+        "height": 700,
+        "bytes": 77752
+      }
+    ]
+  },
+  "assets/bc2be9549d07-69fa40fb9e4cc6fbfc9245f0_11.jpg": {
+    "width": 1500,
+    "height": 1000,
+    "variants": [
+      {
+        "file": "assets/responsive/ff2d4f031721-96.webp",
+        "width": 96,
+        "height": 64,
+        "bytes": 2728
+      },
+      {
+        "file": "assets/responsive/ff2d4f031721-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 6540
+      },
+      {
+        "file": "assets/responsive/ff2d4f031721-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 20424
+      },
+      {
+        "file": "assets/responsive/ff2d4f031721-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 38316
+      },
+      {
+        "file": "assets/responsive/ff2d4f031721-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 58464
+      },
+      {
+        "file": "assets/responsive/ff2d4f031721-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 99806
+      },
+      {
+        "file": "assets/responsive/ff2d4f031721-1280.webp",
+        "width": 1280,
+        "height": 853,
+        "bytes": 144860
+      },
+      {
+        "file": "assets/bc2be9549d07-69fa40fb9e4cc6fbfc9245f0_11.jpg",
+        "width": 1500,
+        "height": 1000,
+        "bytes": 145716
+      }
+    ]
+  },
+  "assets/c776a145f73e-Vf4brl5yhI9E4QUyBlv9Nt6B162O8uwumAi4r8mEt-dfYlbso7yD7a8zLeYYe_7ZeO-yfwSph9ruO9GVQwmSQtr7rEZqTLo.jpeg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "file": "assets/responsive/31672ce5a4e2-96.webp",
+        "width": 96,
+        "height": 54,
+        "bytes": 3230
+      },
+      {
+        "file": "assets/responsive/31672ce5a4e2-160.webp",
+        "width": 160,
+        "height": 90,
+        "bytes": 7684
+      },
+      {
+        "file": "assets/responsive/31672ce5a4e2-320.webp",
+        "width": 320,
+        "height": 180,
+        "bytes": 25564
+      },
+      {
+        "file": "assets/responsive/31672ce5a4e2-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 49558
+      },
+      {
+        "file": "assets/responsive/31672ce5a4e2-640.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 79358
+      },
+      {
+        "file": "assets/responsive/31672ce5a4e2-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 140900
+      },
+      {
+        "file": "assets/c776a145f73e-Vf4brl5yhI9E4QUyBlv9Nt6B162O8uwumAi4r8mEt-dfYlbso7yD7a8zLeYYe_7ZeO-yfwSph9ruO9GVQwmSQtr7rEZqTLo.jpeg",
+        "width": 1200,
+        "height": 675,
+        "bytes": 167458
+      }
+    ]
+  },
+  "assets/cebfa531ac04-6a1895a8d6bdea8424fb5542_Croton-planty-4.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/b19019fd3768-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6268
+      },
+      {
+        "file": "assets/responsive/b19019fd3768-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 14314
+      },
+      {
+        "file": "assets/responsive/b19019fd3768-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 43932
+      },
+      {
+        "file": "assets/responsive/b19019fd3768-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 89938
+      },
+      {
+        "file": "assets/responsive/b19019fd3768-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 152334
+      },
+      {
+        "file": "assets/cebfa531ac04-6a1895a8d6bdea8424fb5542_Croton-planty-4.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 154994
+      }
+    ]
+  },
+  "assets/da0de06034fe-6a1895c24df0c015c7b33b09_Peperomia-planty-4.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/8b0a54e0cac7-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5962
+      },
+      {
+        "file": "assets/responsive/8b0a54e0cac7-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 13506
+      },
+      {
+        "file": "assets/responsive/8b0a54e0cac7-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 40788
+      },
+      {
+        "file": "assets/responsive/8b0a54e0cac7-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 85528
+      },
+      {
+        "file": "assets/responsive/8b0a54e0cac7-640.webp",
+        "width": 640,
+        "height": 779,
+        "bytes": 145194
+      },
+      {
+        "file": "assets/da0de06034fe-6a1895c24df0c015c7b33b09_Peperomia-planty-4.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 147586
+      }
+    ]
+  },
+  "assets/dde580b5ad28-69f9ca389064591fc362f760_Begonia-planty-2.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/adf887053f9a-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6246
+      },
+      {
+        "file": "assets/responsive/adf887053f9a-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 13678
+      },
+      {
+        "file": "assets/responsive/adf887053f9a-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 45348
+      },
+      {
+        "file": "assets/responsive/adf887053f9a-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 94264
+      },
+      {
+        "file": "assets/dde580b5ad28-69f9ca389064591fc362f760_Begonia-planty-2.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 152272
+      }
+    ]
+  },
+  "assets/e35658e9a776-6a18960ace8afd4548652e3e_Anthurium-planty-4.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/6612d2eac7d5-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6688
+      },
+      {
+        "file": "assets/responsive/6612d2eac7d5-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 15896
+      },
+      {
+        "file": "assets/responsive/6612d2eac7d5-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 51860
+      },
+      {
+        "file": "assets/responsive/6612d2eac7d5-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 111132
+      },
+      {
+        "file": "assets/e35658e9a776-6a18960ace8afd4548652e3e_Anthurium-planty-4.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 183358
+      }
+    ]
+  },
+  "assets/ebf2b48d3cf5-69f48a4e4dbe9b9b439df8b4-6a2c30c84638e51870501900_live-demo_poster.0000000.jpg": {
+    "width": 1280,
+    "height": 720,
+    "variants": [
+      {
+        "file": "assets/responsive/93a520d6391b-96.webp",
+        "width": 96,
+        "height": 54,
+        "bytes": 2338
+      },
+      {
+        "file": "assets/responsive/93a520d6391b-160.webp",
+        "width": 160,
+        "height": 90,
+        "bytes": 5778
+      },
+      {
+        "file": "assets/responsive/93a520d6391b-320.webp",
+        "width": 320,
+        "height": 180,
+        "bytes": 20284
+      },
+      {
+        "file": "assets/responsive/93a520d6391b-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 41062
+      },
+      {
+        "file": "assets/responsive/93a520d6391b-640.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 67806
+      },
+      {
+        "file": "assets/responsive/93a520d6391b-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 125534
+      },
+      {
+        "file": "assets/ebf2b48d3cf5-69f48a4e4dbe9b9b439df8b4-6a2c30c84638e51870501900_live-demo_poster.0000000.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 172255
+      }
+    ]
+  },
+  "assets/f9714ecad4e8-69f740038e5ebbe23b202619_Sarah-Wilson.webp": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "file": "assets/responsive/587e8257fbb0-96.webp",
+        "width": 96,
+        "height": 72,
+        "bytes": 1952
+      },
+      {
+        "file": "assets/responsive/587e8257fbb0-160.webp",
+        "width": 160,
+        "height": 120,
+        "bytes": 3748
+      },
+      {
+        "file": "assets/responsive/587e8257fbb0-320.webp",
+        "width": 320,
+        "height": 240,
+        "bytes": 11236
+      },
+      {
+        "file": "assets/responsive/587e8257fbb0-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 23420
+      },
+      {
+        "file": "assets/responsive/587e8257fbb0-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 37104
+      },
+      {
+        "file": "assets/responsive/587e8257fbb0-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 66516
+      },
+      {
+        "file": "assets/responsive/587e8257fbb0-1280.webp",
+        "width": 1280,
+        "height": 960,
+        "bytes": 95922
+      },
+      {
+        "file": "assets/f9714ecad4e8-69f740038e5ebbe23b202619_Sarah-Wilson.webp",
+        "width": 1448,
+        "height": 1086,
+        "bytes": 118170
+      }
+    ]
+  },
+  "assets/fb7a1abe0ebd-6a1893c46abbc45187ef7fb0_Alocasia-planty-3.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/d35063d0296d-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 6236
+      },
+      {
+        "file": "assets/responsive/d35063d0296d-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 13742
+      },
+      {
+        "file": "assets/responsive/d35063d0296d-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 45292
+      },
+      {
+        "file": "assets/responsive/d35063d0296d-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 95008
+      },
+      {
+        "file": "assets/fb7a1abe0ebd-6a1893c46abbc45187ef7fb0_Alocasia-planty-3.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 147832
+      }
+    ]
+  },
+  "assets/fd3d7c59ebfd-69f9ca135cc6be793cac11de_Dracaena-planty-2.webp": {
+    "width": 769,
+    "height": 936,
+    "variants": [
+      {
+        "file": "assets/responsive/432b166da0ea-96.webp",
+        "width": 96,
+        "height": 117,
+        "bytes": 5266
+      },
+      {
+        "file": "assets/responsive/432b166da0ea-160.webp",
+        "width": 160,
+        "height": 195,
+        "bytes": 11194
+      },
+      {
+        "file": "assets/responsive/432b166da0ea-320.webp",
+        "width": 320,
+        "height": 389,
+        "bytes": 33020
+      },
+      {
+        "file": "assets/responsive/432b166da0ea-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 64144
+      },
+      {
+        "file": "assets/fd3d7c59ebfd-69f9ca135cc6be793cac11de_Dracaena-planty-2.webp",
+        "width": 769,
+        "height": 936,
+        "bytes": 75290
+      }
+    ]
+  }
+}

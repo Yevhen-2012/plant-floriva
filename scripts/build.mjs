@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { load } from 'cheerio';
+import { responsiveImages } from './images.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const output = path.join(root, 'dist');
@@ -9,10 +10,12 @@ const manifest = JSON.parse(await fs.readFile(path.join(root, 'data/capture.json
 for (const url of Object.keys(manifest.assets)) if (new URL(url).hostname === 'www.google.com' && new URL(url).pathname.startsWith('/maps/embed')) delete manifest.assets[url];
 const collections = JSON.parse(await fs.readFile(path.join(root, 'content/collections.json'), 'utf8'));
 const assistantTemplate = await fs.readFile(path.join(root, 'templates/assistant.html'), 'utf8');
+const imageManifest = JSON.parse(await fs.readFile(path.join(root, 'content/responsive-images.json'), 'utf8'));
 const revisedAssets = await Promise.all([
   ['assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js', 'assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js'],
   ['js/migration.css', 'public/migration.css'],
-  ['js/assistant.css', 'public/assistant.css']
+  ['js/assistant.css', 'public/assistant.css'],
+  ['js/video.js', 'public/video.js']
 ].map(async ([file, source]) => [file, createHash('sha256').update(await fs.readFile(path.join(root, source))).digest('hex').slice(0, 10)]));
 const collection = name => collections.find(item => item.schema.slug === name)?.items ?? [];
 await fs.mkdir(output, { recursive: true });
@@ -55,7 +58,8 @@ const catalog = collection('product').filter(item => !item.isDraft && !item.isAr
   const sku = collection('sku').find(item => item.id === product.fieldData['default-sku']);
   const image = product.fieldData['main-img']?.url ?? sku?.fieldData['main-image']?.url;
   if (!manifest.assets[image]) throw new Error(`Missing product image: ${product.fieldData.name}`);
-  return { id: product.id, name: product.fieldData.name, slug: product.fieldData.slug, image: manifest.assets[image], price: sku?.fieldData.price?.value ?? 0 };
+  const thumbnail = imageManifest[manifest.assets[image]]?.variants.find(variant => variant.width >= 160)?.file ?? manifest.assets[image];
+  return { id: product.id, name: product.fieldData.name, slug: product.fieldData.slug, image: thumbnail, price: sku?.fieldData.price?.value ?? 0 };
 });
 await fs.mkdir(path.join(output, 'data'), { recursive: true });
 await fs.writeFile(path.join(output, 'data/catalog.json'), JSON.stringify(catalog, null, 2));
@@ -145,13 +149,25 @@ for (const route of routes) {
     el.removeAttr('integrity crossorigin');
   });
   $('[srcset]').each((_, element) => { const el = $(element); el.attr('srcset', el.attr('srcset').split(',').map(part => { const [url,...sizes] = part.trim().split(/\s+/); return [localUrl(url, from),...sizes].join(' '); }).join(', ')); });
+  $('video').each((_, element) => {
+    const video = $(element);
+    if (!video.closest('.demo-video-wrapper').length) return;
+    video.attr('data-plant-video', '').attr('preload', 'none').removeAttr('autoplay');
+    video.parent().removeAttr('data-video-urls data-autoplay');
+    video.find('source[src]').each((_, source) => {
+      const el = $(source), src = el.attr('src');
+      el.attr('data-plant-src', src).attr('type', src.endsWith('.webm') ? 'video/webm' : 'video/mp4').removeAttr('src');
+    });
+  });
   $('body').append(`<dialog class="plant-cart" id="plant-cart" aria-labelledby="plant-cart-title"><div class="plant-cart-header"><h2 id="plant-cart-title">Your Cart</h2><button type="button" data-close-cart aria-label="Close cart">✕</button></div><div data-cart-items></div><div class="plant-cart-total"><span>Subtotal</span><strong data-cart-total>€0.00</strong></div><p class="plant-cart-note">Your selection is saved in this browser. Online checkout is not available yet.</p><div class="plant-cart-links"><a href="${localUrl('/shop',from)}">Continue shopping</a><a href="${localUrl('/contact',from)}">Contact us</a></div></dialog><script src="${relative(from, 'js/runtime.js')}"></script>`);
   $('head').append(`<link rel="stylesheet" href="${relative(from, 'js/assistant.css')}">`);
   $('body').append(assistantTemplate
-    .replaceAll('{{plantImage}}', relative(from, 'assets/0b22c5690e7e-69f9c9e7e9bc2ec60810028a_Alocasia-planty-2-p-500.webp'))
+    .replaceAll('{{plantImage}}', relative(from, 'assets/021953adb952-69f9c9e7e9bc2ec60810028a_Alocasia-planty-2.webp'))
     .replaceAll('{{shopUrl}}', localUrl('/shop', from))
     .replaceAll('{{blogUrl}}', localUrl('/blog', from)));
   $('body').append(`<script src="${relative(from, 'js/assistant.js')}"></script>`);
+  if ($('video[data-plant-video]').length) $('body').append(`<script src="${relative(from, 'js/video.js')}"></script>`);
+  responsiveImages($, from, imageManifest);
   for (const [file, revision] of revisedAssets) {
     const url = relative(from, file);
     $('script[src],link[href]').each((_, element) => {

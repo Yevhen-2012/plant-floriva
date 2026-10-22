@@ -18,8 +18,8 @@ function walk(dir) {
     if (!file.endsWith('.html')) continue;
     pages++;
     const $ = load(fs.readFileSync(file,'utf8'));
-    $('[href],[src],[poster]').each((_, el) => {
-      for (const a of ['href','src','poster']) check($(el).attr(a),file);
+    $('[href],[src],[poster],[data-plant-src]').each((_, el) => {
+      for (const a of ['href','src','poster','data-plant-src']) check($(el).attr(a),file);
       if ($(el).attr('src')?.startsWith('https:') && !$(el).is('iframe')) errors.push(`Remote resource: ${$(el).attr('src')}`);
     });
     $('[srcset]').each((_,el) => $(el).attr('srcset').split(',').forEach(part => check(part.trim().split(/\s+/)[0],file)));
