@@ -15,6 +15,9 @@ const revisedAssets = await Promise.all([
   ['assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js', 'assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js'],
   ['js/migration.css', 'public/migration.css'],
   ['js/assistant.css', 'public/assistant.css'],
+  ['assets/fonts/inter.css', 'assets/fonts/inter.css'],
+  ['assets/79095fa76cdd-home.js', 'assets/79095fa76cdd-home.js'],
+  ['js/product.js', 'public/product.js'],
   ['js/video.js', 'public/video.js']
 ].map(async ([file, source]) => [file, createHash('sha256').update(await fs.readFile(path.join(root, source))).digest('hex').slice(0, 10)]));
 const collection = name => collections.find(item => item.schema.slug === name)?.items ?? [];
@@ -75,7 +78,11 @@ for (const route of routes) {
   $('script').each((_, element) => {
     const script = $(element);
     if (/webfont/i.test(script.attr('src') ?? '') || script.text().includes('WebFont.load') || /gsap@3\.13/.test(script.attr('src') ?? '')) script.remove();
+    else if (script.text().includes('const productSwiper = new Swiper')) script.remove();
+    else if (script.text().trim() === 'gsap.registerPlugin(ScrollTrigger);') script.attr('src', relative(from, 'js/animations.js')).empty();
+    else if ((script.attr('src') ?? '').includes('product.js')) script.attr('src', relative(from, 'js/product.js'));
   });
+  $('link[href="https://cdn.prod.website-files.com/...shared.css"]').remove();
   $('[data-node-type="commerce-cart-wrapper"]').each((_, element) => {
     const original = $(element);
     original.remove();
@@ -99,8 +106,7 @@ for (const route of routes) {
   });
   $('.w-form-done,.w-form-fail').remove();
   $('head').append(`<link rel="stylesheet" href="${relative(from, 'js/migration.css')}">`);
-  const font = Object.entries(manifest.assets).find(([url]) => url.startsWith('https://fonts.googleapis.com/css2'));
-  if (font) $('head').append(`<link rel="stylesheet" href="${relative(from, font[1])}">`);
+  $('head').prepend(`<link rel="preload" href="${relative(from, 'assets/fonts/inter-latin-3100e775e8.woff2')}" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="${relative(from, 'assets/fonts/inter.css')}">`);
   if (route === '/') {
     $('.hero__btn-wrapper a[href="#"]').not('.video-link').attr('href', '/shop');
     $('.hero__content a').filter((_, el) => $(el).text().trim() === 'Explore').attr('href', '/shop');
@@ -146,7 +152,8 @@ for (const route of routes) {
     if (el.is('iframe')) return;
     for (const a of ['src', 'poster', 'data-poster-url', 'href']) { if (el.attr(a)) el.attr(a, localUrl(el.attr(a), from)); }
     if (el.attr('data-video-urls')) el.attr('data-video-urls', el.attr('data-video-urls').split(',').map(value => localUrl(value, from)).join(','));
-    el.removeAttr('integrity crossorigin');
+    el.removeAttr('integrity');
+    if (!el.is('link[rel="preload"][as="font"]')) el.removeAttr('crossorigin');
   });
   $('[srcset]').each((_, element) => { const el = $(element); el.attr('srcset', el.attr('srcset').split(',').map(part => { const [url,...sizes] = part.trim().split(/\s+/); return [localUrl(url, from),...sizes].join(' '); }).join(', ')); });
   $('video').each((_, element) => {
@@ -168,6 +175,14 @@ for (const route of routes) {
   $('body').append(`<script src="${relative(from, 'js/assistant.js')}"></script>`);
   if ($('video[data-plant-video]').length) $('body').append(`<script src="${relative(from, 'js/video.js')}"></script>`);
   responsiveImages($, from, imageManifest);
+  const firstProductImage = $('.product__swiper-wrapper .swiper-img').first();
+  if (firstProductImage.length) {
+    firstProductImage.attr({ loading: 'eager', fetchpriority: 'high' });
+    $('head').append($('<link>').attr({ rel: 'preload', as: 'image', href: firstProductImage.attr('src'), imagesrcset: firstProductImage.attr('srcset'), imagesizes: firstProductImage.attr('sizes'), fetchpriority: 'high' }));
+  }
+  // Classic deferred scripts download together and execute in document order.
+  // Dependency-using inline scripts were moved to external files above.
+  $('script[src]').attr('defer', '').removeAttr('async');
   for (const [file, revision] of revisedAssets) {
     const url = relative(from, file);
     $('script[src],link[href]').each((_, element) => {

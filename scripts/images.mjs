@@ -8,7 +8,7 @@ const sizesFor = image => {
   if (image.is('.hero__customer-portrait')) return '3.2rem';
   if (image.is('.customer-portrait')) return '5rem';
   if (image.is('.card-img')) return '(max-width: 479px) 18rem, 20rem';
-  if (image.is('.swiper-img')) return '(max-width: 479px) 17rem, (max-width: 991px) 25rem, 29rem';
+  if (image.is('.swiper-img')) return '(max-width: 767px) 17rem, (max-width: 991px) 25rem, 29rem';
   if (image.is('.trendy__cms-img, .trendy__cms-img-right')) return '(max-width: 479px) 13rem, (max-width: 767px) 10rem, (max-width: 991px) 20rem, 27rem';
   if (image.is('.blog__img')) return '25rem';
   if (image.is('.background-img, .background-img-tablet, .background-img-mobile')) return '100vw';

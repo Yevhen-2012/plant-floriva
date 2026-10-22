@@ -87,31 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-// Hero intro animation
-window.addEventListener("DOMContentLoaded", () => {
-  gsap.set(".hero__content, .hero__review-wrapper", {
-    autoAlpha: 0,
-    y: 40
-  });
+// First-screen content is visible immediately; scroll reveals stay unchanged.
 
-  const tl = gsap.timeline({
-    defaults: {
-      duration: 0.8,
-      ease: "power3.out"
-    },
-    delay: 0.3
-  });
-
-  tl.to(".hero__content", {
-    y: 0,
-    autoAlpha: 1
-  })
-  .to(".hero__review-wrapper", {
-    y: 0,
-    autoAlpha: 1
-  }, "-=0.45");
-});
-  
  // Reveal animation
 gsap.registerPlugin(ScrollTrigger);
 

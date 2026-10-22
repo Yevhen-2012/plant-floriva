@@ -18,11 +18,21 @@ function walk(dir) {
     if (!file.endsWith('.html')) continue;
     pages++;
     const $ = load(fs.readFileSync(file,'utf8'));
+    $('script[src]').each((_, el) => {
+      if ($(el).attr('defer') === undefined || $(el).attr('async') !== undefined) errors.push(`${path.relative(root,file)}: script execution order is not deferred`);
+    });
+    if ($('script:not([src])').text().includes('gsap.')) errors.push(`${path.relative(root,file)}: inline GSAP runs before deferred dependencies`);
+    const gallery = $('.product__swiper-wrapper .swiper-img');
+    if (gallery.length) {
+      if (gallery.first().attr('loading') !== 'eager' || gallery.first().attr('fetchpriority') !== 'high') errors.push(`${path.relative(root,file)}: first gallery image lacks priority`);
+      const preload = $('link[rel="preload"][as="image"]');
+      if (preload.length !== 1 || preload.attr('imagesrcset') !== gallery.first().attr('srcset') || preload.attr('imagesizes') !== gallery.first().attr('sizes')) errors.push(`${path.relative(root,file)}: gallery preload does not match the responsive image`);
+    }
     $('[href],[src],[poster],[data-plant-src]').each((_, el) => {
       for (const a of ['href','src','poster','data-plant-src']) check($(el).attr(a),file);
       if ($(el).attr('src')?.startsWith('https:') && !$(el).is('iframe')) errors.push(`Remote resource: ${$(el).attr('src')}`);
     });
-    $('[srcset]').each((_,el) => $(el).attr('srcset').split(',').forEach(part => check(part.trim().split(/\s+/)[0],file)));
+    $('[srcset],[imagesrcset]').each((_,el) => ($(el).attr('srcset') ?? $(el).attr('imagesrcset')).split(',').forEach(part => check(part.trim().split(/\s+/)[0],file)));
   }
 }
 walk(root);
