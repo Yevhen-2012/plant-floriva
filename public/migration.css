@@ -9,7 +9,14 @@ body .button-main_btn,body .video-link,body .nav-ico-link-search{transition-dura
 .plant-background-hires{opacity:0;pointer-events:none;transition:opacity 1300ms ease}
 .plant-background-hires.is-ready{opacity:1}
 @media(prefers-reduced-motion:reduce){.plant-background-hires{transition:none}}
-@media(max-width:1199px){.background-img{display:none}}
+@media(max-width:1199px){
+  .background-img{display:none}
+  /* Cover the expanded iOS viewport when the browser toolbar retracts.
+     Keep both layers the same stable size instead of the smaller 100svh. */
+  .background-img-tablet,.background-img-mobile{
+    width:100%;height:100vh;height:100lvh;min-height:100%;inset:0 0 auto;
+  }
+}
 @media(min-width:768px) and (max-width:1199px){.background-img-tablet{display:block;filter:brightness(80%)}}
 @media(max-width:767px){.background-img-tablet{display:none}.background-img-mobile{display:block;filter:brightness(80%)}}
 /* The first screen must be visible before JavaScript finishes loading. */
