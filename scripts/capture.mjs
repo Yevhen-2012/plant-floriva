@@ -56,6 +56,7 @@ for (let index = 0; index < queue.length; ) {
       });
       $('[src],[poster],[data-poster-url],[data-video-urls],link[href]').each((_, element) => {
         const el = $(element);
+        if (el.is('iframe')) return;
         for (const a of ['src', 'poster', 'data-poster-url']) includeResource(el.attr(a));
         if (el.is('link') && !/preconnect|dns-prefetch/.test(el.attr('rel') ?? '')) includeResource(el.attr('href'));
         for (const url of (el.attr('data-video-urls') ?? '').split(',')) includeResource(url);

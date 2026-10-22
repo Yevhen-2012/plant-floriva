@@ -5,6 +5,7 @@ import { load } from 'cheerio';
 const root = path.resolve(import.meta.dirname, '..');
 const output = path.join(root, 'dist');
 const manifest = JSON.parse(await fs.readFile(path.join(root, 'data/capture.json'), 'utf8'));
+for (const url of Object.keys(manifest.assets)) if (new URL(url).hostname === 'www.google.com' && new URL(url).pathname.startsWith('/maps/embed')) delete manifest.assets[url];
 const collections = JSON.parse(await fs.readFile(path.join(root, 'content/collections.json'), 'utf8'));
 const collection = name => collections.find(item => item.schema.slug === name)?.items ?? [];
 await fs.mkdir(output, { recursive: true });
