@@ -75,7 +75,8 @@ for (const route of routes) {
   if (route.startsWith('/category/')) source = manifest.pages['/shop'];
   let html = await fs.readFile(path.join(root, 'snapshots', source), 'utf8');
   const $ = load(html);
-  $('html').attr('lang', 'en').removeAttr('data-wf-domain data-wf-status');
+  $('html').attr({ lang: 'en', translate: 'no' }).addClass('notranslate').removeAttr('data-wf-domain data-wf-status');
+  $('head').prepend('<meta name="google" content="notranslate">');
   $('link[rel="preconnect"],link[rel="dns-prefetch"],script[type="text/x-wf-template"]').remove();
   $('script').each((_, element) => {
     const script = $(element);
@@ -220,5 +221,5 @@ for (const route of routes) {
   await fs.mkdir(path.dirname(path.join(output, from)), { recursive: true });
   await fs.writeFile(path.join(output, from), html);
 }
-await fs.writeFile(path.join(output, '404.html'), '<!doctype html><html lang="en"><meta charset="utf-8"><title>Page not found — Floriva</title><body style="font:20px system-ui;background:#172218;color:white;padding:10vw"><h1>This page is taking root elsewhere.</h1><a href="./" style="color:inherit">Return to Floriva</a></body></html>');
+await fs.writeFile(path.join(output, '404.html'), '<!doctype html><html lang="en" translate="no" class="notranslate"><meta charset="utf-8"><meta name="google" content="notranslate"><title>Page not found — Floriva</title><body style="font:20px system-ui;background:#172218;color:white;padding:10vw"><h1>This page is taking root elsewhere.</h1><a href="./" style="color:inherit">Return to Floriva</a></body></html>');
 console.log(`Built ${routes.size} pages, ${catalog.length} products, ${Object.keys(manifest.assets).length} local assets.`);
