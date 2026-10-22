@@ -32,7 +32,7 @@
   text-align: left;
   box-shadow: 0 12px 36px #08180e55;
   transform-origin: bottom right;
-  transition: width 140ms cubic-bezier(.2,.7,.3,1), height 140ms cubic-bezier(.2,.7,.3,1), border-radius 140ms, box-shadow 140ms, transform 140ms;
+  transition: width 240ms cubic-bezier(.2,.7,.3,1), height 240ms cubic-bezier(.2,.7,.3,1), border-radius 240ms, box-shadow 240ms, transform 240ms;
 }
 #floriva-assistant .floriva-assistant-avatar {
   display: flex;
@@ -45,7 +45,7 @@
   background: var(--assistant-sage);
   color: #2b4530;
   overflow: hidden;
-  transition: width 140ms, height 140ms;
+  transition: width 240ms, height 240ms;
 }
 #floriva-assistant .floriva-assistant-avatar img { display: block; width: 76%; height: 76%; object-fit: contain; }
 #floriva-assistant .floriva-assistant-label { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
