@@ -26,6 +26,7 @@ const revisedAssets = await Promise.all([
   ['assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js', 'assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js'],
   ['js/migration.css', 'public/migration.css'],
   ['js/assistant.css', 'public/assistant.css'],
+  ['js/assistant.js', 'public/assistant.js'],
   ['js/knowledge.js', 'public/knowledge.js'],
   ['js/runtime.js', 'public/runtime.js'],
   ['assets/fonts/inter.css', 'assets/fonts/inter.css'],

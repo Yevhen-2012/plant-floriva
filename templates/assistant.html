@@ -1,18 +1,20 @@
-<div id="floriva-assistant">
+<div id="floriva-assistant" data-api-url="https://floriva-bot.onrender.com/api/widget">
   <aside class="floriva-assistant-panel" id="floriva-assistant-panel" aria-labelledby="floriva-assistant-title" hidden>
     <header class="floriva-assistant-header">
       <span class="floriva-assistant-avatar" aria-hidden="true"><img src="{{plantImage}}" alt="" width="76" height="76"></span>
       <div class="floriva-assistant-heading"><h2 id="floriva-assistant-title">Your Floriva guide</h2><p>Find your kind of green.</p></div>
+      <button class="floriva-assistant-new" type="button" data-assistant-new aria-label="Start a new conversation" title="New conversation" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></svg></button>
       <button class="floriva-assistant-close" type="button" data-assistant-close aria-label="Minimize Floriva chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14"/></svg></button>
     </header>
-    <div class="floriva-assistant-content">
-      <div class="floriva-assistant-message"><p>A little help is growing here.</p><p>Our chat will be available soon. In the meantime, explore our plants and care advice.</p></div>
-      <div class="floriva-assistant-links"><a href="{{shopUrl}}">Explore plants</a><a href="{{blogUrl}}">Care advice</a></div>
+    <div class="floriva-assistant-content" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions text" tabindex="0">
+      <div class="floriva-assistant-message" data-role="assistant"><span class="floriva-assistant-speaker">Floriva</span><p>Hello! I can help with plants, current prices, care or a request for the store. Ask me in English.</p></div>
     </div>
-    <div class="floriva-assistant-composer" role="group" aria-label="Chat coming soon">
-      <input type="text" aria-label="Floriva chat is coming soon" placeholder="Chat is coming soon…" disabled>
-      <button type="button" disabled aria-label="Send message — coming soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button>
-    </div>
+    <div class="floriva-assistant-status"><span role="status" data-assistant-status>Open the chat to connect.</span><button type="button" data-assistant-retry hidden>Reconnect</button></div>
+    <div class="floriva-assistant-links"><a href="{{shopUrl}}">Explore plants</a><a href="{{blogUrl}}">Care advice</a></div>
+    <form class="floriva-assistant-composer" aria-label="Send a message">
+      <input type="text" aria-label="Your message" placeholder="Ask Floriva…" maxlength="2000" autocomplete="off" required disabled>
+      <button type="submit" disabled aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button>
+    </form>
   </aside>
   <button class="floriva-assistant-launcher" type="button" aria-controls="floriva-assistant-panel" aria-expanded="false" aria-label="Open Floriva chat">
     <span class="floriva-assistant-avatar" aria-hidden="true"><img src="{{plantImage}}" alt="" width="76" height="76"><svg class="floriva-assistant-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 6 12 12M6 18 18 6"/></svg></span>

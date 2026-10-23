@@ -70,7 +70,7 @@
 #floriva-assistant .floriva-assistant-panel {
   display: flex;
   flex-direction: column;
-  width: 360px;
+  width: 390px;
   max-width: 100%;
   max-height: calc(100vh - 148px);
   max-height: calc(100dvh - 148px);
@@ -94,28 +94,37 @@
 #floriva-assistant .floriva-assistant-heading { min-width: 0; }
 #floriva-assistant .floriva-assistant-heading h2 { margin: 0; font: 500 15px/1.4 Inter, Arial, sans-serif; letter-spacing: normal; color: #233a27; }
 #floriva-assistant .floriva-assistant-heading p { margin: 3px 0 0; font-size: 11px; line-height: 1.5; color: #506749; }
-#floriva-assistant .floriva-assistant-close { display: grid; place-items: center; width: 40px; height: 40px; padding: 9px; flex: 0 0 auto; margin-left: auto; border: 0; border-radius: 50%; background: transparent; color: #415d39; }
-#floriva-assistant .floriva-assistant-close svg { width: 19px; height: 19px; }
+#floriva-assistant .floriva-assistant-close, #floriva-assistant .floriva-assistant-new { display: grid; place-items: center; width: 40px; height: 40px; padding: 9px; flex: 0 0 auto; border: 0; border-radius: 50%; background: transparent; color: #415d39; }
+#floriva-assistant .floriva-assistant-new { margin-left: auto; }
+#floriva-assistant .floriva-assistant-new:disabled { opacity: .45; }
+#floriva-assistant .floriva-assistant-close svg, #floriva-assistant .floriva-assistant-new svg { width: 19px; height: 19px; }
 #floriva-assistant .floriva-assistant-panel :is(button, a):focus-visible { outline-color: #365333; outline-offset: 2px; }
-#floriva-assistant .floriva-assistant-content { flex: 1 1 auto; height: 220px; min-height: 0; padding: 22px 18px; overflow-y: auto; overscroll-behavior: contain; }
-#floriva-assistant .floriva-assistant-message { padding: 15px; border-radius: 5px 19px 19px 19px; background: #f3f5ed; font-size: 13px; line-height: 1.65; }
+#floriva-assistant .floriva-assistant-content { flex: 1 1 auto; height: 300px; min-height: 100px; padding: 18px; overflow-y: auto; overscroll-behavior: contain; }
+#floriva-assistant .floriva-assistant-message { padding: 13px 15px; margin: 0 18px 12px 0; border-radius: 5px 19px 19px 19px; background: #f3f5ed; font-size: 13px; line-height: 1.65; overflow-wrap: anywhere; }
+#floriva-assistant .floriva-assistant-message[data-role="user"] { margin: 0 0 12px 18px; border-radius: 19px 5px 19px 19px; background: #d2dfc7; }
+#floriva-assistant .floriva-assistant-speaker { display: block; margin-bottom: 4px; font-size: 10px; font-weight: 600; color: #506749; }
 #floriva-assistant .floriva-assistant-message p { margin: 0; color: #2c432b; }
+#floriva-assistant .floriva-assistant-message p { white-space: pre-wrap; }
 #floriva-assistant .floriva-assistant-message p + p { margin-top: 8px; }
-#floriva-assistant .floriva-assistant-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+#floriva-assistant .floriva-assistant-status { flex: 0 0 auto; padding: 0 18px 10px; font-size: 11px; line-height: 1.5; color: #506749; }
+#floriva-assistant .floriva-assistant-status button { padding: 4px 8px; margin: 4px 0 0 4px; border: 1px solid #96ac88; border-radius: 12px; background: #f3f5ed; color: #2c432b; }
+#floriva-assistant .floriva-assistant-status button[hidden] { display: none; }
+#floriva-assistant .floriva-assistant-links { display: flex; flex: 0 0 auto; flex-wrap: wrap; gap: 8px; padding: 0 18px 12px; }
 #floriva-assistant .floriva-assistant-links a { display: inline-flex; align-items: center; min-height: 36px; padding: 7px 12px; border: 1px solid #96ac88; border-radius: 22px; color: #385333; text-decoration: none; font-size: 12px; background: #e9efdf; }
 #floriva-assistant .floriva-assistant-composer { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; padding: 13px; border-top: 1px solid #b8c8ac; background: #edf1e5; }
 #floriva-assistant .floriva-assistant-composer input { width: 0; min-width: 0; flex: 1; padding: 10px 4px; border: 0; border-radius: 0; background: transparent; color: #566d4b; font-size: 13px; opacity: 1; -webkit-text-fill-color: #566d4b; }
 #floriva-assistant .floriva-assistant-composer input::placeholder { color: #566d4b; opacity: 1; }
-#floriva-assistant .floriva-assistant-composer button { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 auto; padding: 10px; border: 0; border-radius: 50%; background: #637d59; color: #edf3e5; opacity: .65; }
+#floriva-assistant .floriva-assistant-composer button { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 auto; padding: 10px; border: 0; border-radius: 50%; background: #3b5d36; color: #edf3e5; }
+#floriva-assistant .floriva-assistant-composer button:disabled { opacity: .5; }
 #floriva-assistant .floriva-assistant-composer svg { width: 18px; height: 18px; }
 @media (max-width: 479px) {
   #floriva-assistant { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); max-width: calc(100% - 32px); gap: 12px; }
   #floriva-assistant .floriva-assistant-launcher { width: 228px; height: 76px; }
-  #floriva-assistant .floriva-assistant-panel { width: min(360px, calc(100vw - 32px)); max-height: calc(100dvh - 120px); }
-  #floriva-assistant .floriva-assistant-content { height: auto; }
+  #floriva-assistant .floriva-assistant-panel { width: min(390px, calc(100vw - 32px)); max-height: calc(100dvh - 120px); }
+  #floriva-assistant .floriva-assistant-content { height: 260px; }
   #floriva-assistant .floriva-assistant-composer input { font-size: 16px; }
   #floriva-assistant .floriva-assistant-launcher:not([aria-expanded="true"]):focus-visible { width: min(284px, calc(100vw - 32px)); }
-  #floriva-assistant .floriva-assistant-links a, #floriva-assistant .floriva-assistant-close { min-height: 44px; min-width: 44px; }
+  #floriva-assistant .floriva-assistant-links a, #floriva-assistant .floriva-assistant-close, #floriva-assistant .floriva-assistant-new, #floriva-assistant .floriva-assistant-composer button { min-height: 44px; min-width: 44px; }
 }
 @media (prefers-reduced-motion: reduce) {
   #floriva-assistant .floriva-assistant-launcher, #floriva-assistant .floriva-assistant-avatar { transition: none; }
