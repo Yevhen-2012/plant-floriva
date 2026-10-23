@@ -9,6 +9,16 @@ const output = path.join(root, 'dist');
 const manifest = JSON.parse(await fs.readFile(path.join(root, 'data/capture.json'), 'utf8'));
 for (const url of Object.keys(manifest.assets)) if (new URL(url).hostname === 'www.google.com' && new URL(url).pathname.startsWith('/maps/embed')) delete manifest.assets[url];
 const collections = JSON.parse(await fs.readFile(path.join(root, 'content/collections.json'), 'utf8'));
+const publicConfig = JSON.parse(await fs.readFile(path.join(root, 'content/supabase-public.json'), 'utf8'));
+let knowledge = JSON.parse(await fs.readFile(path.join(root, 'content/knowledge.snapshot.json'), 'utf8'));
+try {
+  const response = await fetch(publicConfig.supabaseUrl + '/rest/v1/rpc/floriva_public_knowledge', {
+    method: 'POST', headers: { apikey: publicConfig.publishableKey, 'Content-Type': 'application/json' },
+    body: '{}', signal: AbortSignal.timeout(10000)
+  });
+  if (!response.ok) throw new Error('Shared knowledge unavailable');
+  knowledge = await response.json();
+} catch { console.log('Using the generated knowledge snapshot for static fallback; browsers request live Supabase data.'); }
 const assistantTemplate = await fs.readFile(path.join(root, 'templates/assistant.html'), 'utf8');
 const imageManifest = JSON.parse(await fs.readFile(path.join(root, 'content/responsive-images.json'), 'utf8'));
 const backgroundProfiles = JSON.parse(await fs.readFile(path.join(root, 'content/backgrounds.json'), 'utf8'));
@@ -16,6 +26,8 @@ const revisedAssets = await Promise.all([
   ['assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js', 'assets/ec31a84704f2-webflow.schunk.ea430c4ee63e06c2.js'],
   ['js/migration.css', 'public/migration.css'],
   ['js/assistant.css', 'public/assistant.css'],
+  ['js/knowledge.js', 'public/knowledge.js'],
+  ['js/runtime.js', 'public/runtime.js'],
   ['assets/fonts/inter.css', 'assets/fonts/inter.css'],
   ['assets/79095fa76cdd-home.js', 'assets/79095fa76cdd-home.js'],
   ['js/product.js', 'public/product.js'],
@@ -31,7 +43,7 @@ manifest.assets['https://cdn.prod.website-files.com/blur.svg'] = 'assets/blur.sv
 await fs.writeFile(path.join(output, 'assets/blur.svg'), '<svg xmlns="http://www.w3.org/2000/svg"><filter id="blur"><feGaussianBlur stdDeviation="20"/></filter></svg>');
 const relative = (from, to) => path.posix.relative(path.posix.dirname(from), to) || './';
 const target = route => route === '/' ? 'index.html' : `${route.replace(/^\/|\/$/g, '')}/index.html`;
-const routes = new Set([...Object.keys(manifest.pages), '/cart', ...collection('category').map(item => `/category/${item.fieldData.slug}`)]);
+const routes = new Set([...Object.keys(manifest.pages), '/cart', '/product', ...collection('category').map(item => `/category/${item.fieldData.slug}`)]);
 const localUrl = (value, from) => {
   if (!value || /^(?:#|data:|tel:|mailto:|javascript:)/i.test(value)) return value;
   const absolute = new URL(value, 'https://plant-f81e0d.webflow.io/');
@@ -59,20 +71,22 @@ for (const [url, file] of Object.entries(manifest.assets)) {
   });
   await fs.writeFile(path.join(output, file), css);
 }
-const catalog = collection('product').filter(item => !item.isDraft && !item.isArchived).map(product => {
-  const sku = collection('sku').find(item => item.id === product.fieldData['default-sku']);
-  const image = product.fieldData['main-img']?.url ?? sku?.fieldData['main-image']?.url;
-  if (!manifest.assets[image]) throw new Error(`Missing product image: ${product.fieldData.name}`);
-  const thumbnail = imageManifest[manifest.assets[image]]?.variants.find(variant => variant.width >= 160)?.file ?? manifest.assets[image];
-  return { id: product.id, name: product.fieldData.name, slug: product.fieldData.slug, image: thumbnail, price: sku?.fieldData.price?.value ?? 0 };
+const catalog = knowledge.catalog.products.map(product => {
+  const sourceImage = product.image_url?.replace('https://yevhen-2012.github.io/plant-floriva/', '') || 'assets/plant-placeholder.svg';
+  const thumbnail = imageManifest[sourceImage]?.variants.find(variant => variant.width >= 160)?.file ?? sourceImage;
+  return { id: product.id, legacyId: product.legacy_id, name: product.name, slug: product.id, image: thumbnail,
+    price: product.price_eur == null ? null : Math.round(Number(product.price_eur) * 100), description: product.description, categories: product.category_ids };
 });
 await fs.mkdir(path.join(output, 'data'), { recursive: true });
 await fs.writeFile(path.join(output, 'data/catalog.json'), JSON.stringify(catalog, null, 2));
+await fs.writeFile(path.join(output, 'data/knowledge.json'), JSON.stringify(knowledge, null, 2));
+await fs.writeFile(path.join(output, 'data/supabase-public.json'), JSON.stringify(publicConfig));
 for (const route of routes) {
   const from = target(route);
   let source = manifest.pages[route];
   if (route === '/cart') source = manifest.pages['/contact'];
   if (route.startsWith('/category/')) source = manifest.pages['/shop'];
+  if (route === '/product') source = manifest.pages['/product/echinocactus'];
   let html = await fs.readFile(path.join(root, 'snapshots', source), 'utf8');
   const $ = load(html);
   $('html').attr({ lang: 'en', translate: 'no' }).addClass('notranslate').removeAttr('data-wf-domain data-wf-status');
@@ -94,7 +108,8 @@ for (const route of routes) {
   $('.quantity-cart').attr('data-cart-count','').attr('hidden','').text('0');
   $('[data-node-type="commerce-add-to-cart-form"]').each((_, element) => {
     const form = $(element);
-    form.attr('data-plant-add', '').attr('data-product-id', form.attr('data-commerce-product-id'));
+    const item = catalog.find(p => p.legacyId === form.attr('data-commerce-product-id'));
+    form.attr('data-plant-add', '').attr('data-product-id', item?.id ?? '');
     form.find('[data-node-type="commerce-buy-now-button"]').attr('data-buy-now', '').attr('href', localUrl('/cart', from)).text('View cart');
   });
   $('[data-node-type]').each((_, element) => {
@@ -119,17 +134,17 @@ for (const route of routes) {
     const list = $('.catalog__item').first().parent();
     list.empty();
     for (const product of catalog) {
-      const record = collection('product').find(item => item.id === product.id);
       const card = template.clone();
       card.find('.h3-card').text(product.name);
-      card.find('.card-text-wraper').text(record.fieldData.description || record.fieldData['short-descr'] || '');
-      card.find('.card-img').attr('src', record.fieldData['main-img'].url).attr('alt',product.name).removeAttr('srcset sizes');
-      card.find('.text-block-2').text((product.price / 100).toFixed(2));
-      card.find('a[href^="/product/"]').attr('href', `/product/${product.slug}`);
+      card.attr('data-knowledge-product', product.id);
+      card.find('.card-text-wraper').text(product.description || 'Detailed description not yet provided.');
+      card.find('.card-img').attr('src', /^https?:/.test(product.image) ? product.image : relative(from, product.image)).attr('alt',product.name).removeAttr('srcset sizes');
+      card.find('.text-block-2').text(product.price == null ? 'Ask us' : (product.price / 100).toFixed(2));
+      card.find('a[href^="/product/"]').attr('href', manifest.pages[`/product/${product.slug}`] ? `/product/${product.slug}` : `/product?id=${encodeURIComponent(product.id)}`);
       const categories = card.find('.product__categories-list').empty();
-      for (const id of record.fieldData.category ?? []) {
-        const cat = collection('category').find(item => item.id === id);
-        if (cat) categories.append($('<div role="listitem" class="product__category w-dyn-item">').append($('<div>').text(cat.fieldData.name)));
+      for (const id of product.categories ?? []) {
+        const cat = knowledge.catalog.category_records.find(item => item.id === id);
+        if (cat) categories.append($('<div role="listitem" class="product__category w-dyn-item">').append($('<div>').text(cat.name)));
       }
       list.append(card);
     }
@@ -147,6 +162,34 @@ for (const route of routes) {
     $('main').html('<section class="plant-cart-page"><h1>Your plant collection</h1><p>Keep your favourites together. Your selection is saved in this browser. Online checkout is coming soon.</p><button class="button-main_btn w-button" data-open-cart>View cart</button> <a href="/shop">Continue shopping</a></section>');
     $('body').attr('data-open-cart', 'true');
   }
+  $('body').attr('data-knowledge-route', route);
+  $('[role="listitem"],.w-dyn-item').each((_, element) => {
+    const item = $(element);
+    const href = item.find('a[href^="/product/"]').first().attr('href');
+    const slug = href?.split('/').filter(Boolean).pop();
+    if (!slug || !catalog.some(p => p.id === slug)) return;
+    const product = catalog.find(p => p.id === slug);
+    item.attr('data-knowledge-product', slug);
+    item.find('.h3-card').text(product.name);
+    item.find('.text-block-2,[data-wf-sku-bindings]').filter((_, e) => /f_price_|text-block-2/.test(($(e).attr('data-wf-sku-bindings') ?? '') + ' ' + ($(e).attr('class') ?? ''))).text(product.price == null ? 'Ask us' : (product.price / 100).toFixed(2));
+    item.find('.card-text-wraper,.trendy__text-block').text(product.description || 'Detailed description not yet provided.');
+    item.find('img.card-img,img.trendy__cms-img').attr('data-knowledge-image', knowledge.catalog.products.find(p => p.id === slug)?.image_url);
+  });
+  if (route.startsWith('/product')) {
+    const product = catalog.find(p => p.id === route.split('/').pop());
+    if (product) {
+      $('.product__content-wrapper > h1').text(product.name);
+      $('.product__content-wrapper > .text-block').text(product.description || 'Detailed description not yet provided. Please contact the store for specifications.');
+      $('.product__price-wrapper > div').text(product.price == null ? 'Ask us' : (product.price / 100).toFixed(2));
+      const original = knowledge.catalog.products.find(p => p.id === product.id);
+      $('.product__swiper-wrapper .swiper-img').each((index, el) => $(el).attr('data-knowledge-image', original.images[index % original.images.length] || original.image_url));
+    } else if (route === '/product') {
+      $('.product__content-wrapper > h1').text('Plant details');
+      $('.product__content-wrapper > .text-block').text('Loading the selected plant from the catalog.');
+      $('.product__price-wrapper > div').text('');
+    }
+  }
+  $('main').prepend('<p data-knowledge-status role="status" hidden></p>');
   const description = route.startsWith('/product/') ? collection('product').find(p => p.fieldData.slug === route.split('/').pop())?.fieldData['short-descr'] : 'Floriva — indoor plants, botanical inspiration and care advice.';
   if (description && !$('meta[name="description"]').length) $('head').append($('<meta>').attr('name','description').attr('content',description));
   $('a[href]').each((_, element) => { const el = $(element); el.attr('href', localUrl(el.attr('href'), from)); });
@@ -169,7 +212,7 @@ for (const route of routes) {
       el.attr('data-plant-src', src).attr('type', src.endsWith('.webm') ? 'video/webm' : 'video/mp4').removeAttr('src');
     });
   });
-  $('body').append(`<dialog class="plant-cart" id="plant-cart" aria-labelledby="plant-cart-title"><div class="plant-cart-header"><h2 id="plant-cart-title">Your Cart</h2><button type="button" data-close-cart aria-label="Close cart">✕</button></div><div data-cart-items></div><div class="plant-cart-total"><span>Subtotal</span><strong data-cart-total>€0.00</strong></div><p class="plant-cart-note">Your selection is saved in this browser. Online checkout is not available yet.</p><div class="plant-cart-links"><a href="${localUrl('/shop',from)}">Continue shopping</a><a href="${localUrl('/contact',from)}">Contact us</a></div></dialog><script src="${relative(from, 'js/runtime.js')}"></script>`);
+  $('body').append(`<dialog class="plant-cart" id="plant-cart" aria-labelledby="plant-cart-title"><div class="plant-cart-header"><h2 id="plant-cart-title">Your Cart</h2><button type="button" data-close-cart aria-label="Close cart">✕</button></div><div data-cart-items></div><div class="plant-cart-total"><span>Product subtotal</span><strong data-cart-total>€0.00</strong></div><p class="plant-cart-note" data-cart-quote-status>Your selection is saved in this browser. Online checkout is not available yet.</p><div class="plant-cart-links"><a href="${localUrl('/shop',from)}">Continue shopping</a><a href="${localUrl('/contact',from)}">Contact us</a></div></dialog><script src="${relative(from, 'js/knowledge.js')}"></script><script src="${relative(from, 'js/runtime.js')}"></script>`);
   $('head').append(`<link rel="stylesheet" href="${relative(from, 'js/assistant.css')}">`);
   $('body').append(assistantTemplate
     .replaceAll('{{plantImage}}', relative(from, 'assets/021953adb952-69f9c9e7e9bc2ec60810028a_Alocasia-planty-2.webp'))

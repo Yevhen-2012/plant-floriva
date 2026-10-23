@@ -49,7 +49,7 @@ walk(root);
 const catalog = JSON.parse(fs.readFileSync(path.join(root,'data/catalog.json'),'utf8'));
 for (const product of catalog) {
   if (!fs.existsSync(path.join(root,'product',product.slug,'index.html'))) errors.push(`Missing product page: ${product.slug}`);
-  if (!Number.isInteger(product.price) || product.price < 0) errors.push(`Invalid price: ${product.slug}`);
+  if (product.price !== null && (!Number.isInteger(product.price) || product.price < 0)) errors.push(`Invalid price: ${product.slug}`);
   check(product.image,path.join(root,'index.html'));
 }
 const shop = load(fs.readFileSync(path.join(root,'shop/index.html'),'utf8'));

@@ -9,6 +9,8 @@ body .button-main_btn,body .video-link,body .nav-ico-link-search{transition-dura
 .card-price-wraper>.button-main_btn{margin-bottom:0;flex-shrink:0}
 .footer__text-field{color:#fff;caret-color:#fff}
 .footer__text-field::placeholder{color:#fff;opacity:1}
+[data-knowledge-product][hidden],[data-knowledge-status][hidden]{display:none!important}
+[data-knowledge-status]{max-width:1100px;margin:90px auto 12px;padding:12px 20px;color:inherit;font:14px/1.5 Inter,Arial,sans-serif}
 /* Preserve the lightweight background underneath each decoded screen-size variant. */
 .plant-background-hires{opacity:0;pointer-events:none;transition:opacity 1300ms ease}
 .plant-background-hires.is-ready{opacity:1}

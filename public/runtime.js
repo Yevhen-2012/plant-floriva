@@ -9,17 +9,18 @@
   cart = cart.filter(line => line && typeof line.id === 'string');
   const dialog = document.getElementById('plant-cart');
   const list = dialog.querySelector('[data-cart-items]');
-  const money = cents => new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' }).format(cents / 100);
+  const money = cents => cents == null ? 'Ask us' : new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' }).format(cents / 100);
   const quantity = n => Math.max(1, Math.min(99, Math.trunc(Number(n)) || 1));
   const persist = () => { try { localStorage.setItem(key, JSON.stringify(cart)); } catch {} };
   function render() {
     list.replaceChildren();
-    let total = 0, count = 0;
+    let total = 0, count = 0, unpriced = false;
     cart = cart.filter(line => products.some(product => product.id === line.id));
     for (const line of cart) {
       const product = products.find(product => product.id === line.id);
       line.quantity = quantity(line.quantity);
       total += product.price * line.quantity;
+      if (product.price == null) unpriced = true;
       count += line.quantity;
       const row = document.createElement('div');
       row.className = 'plant-cart-row';
@@ -28,7 +29,7 @@
       image.alt = product.name;
       const info = document.createElement('div');
       const link = document.createElement('a');
-      link.href = new URL(`product/${product.slug}/`, base).href;
+      link.href = new URL(`product/?id=${encodeURIComponent(product.slug)}`, base).href;
       link.textContent = product.name;
       const price = document.createElement('p');
       price.textContent = money(product.price);
@@ -50,22 +51,33 @@
       controls.append(minus, amount, plus, remove);
       info.append(link, price, controls);
       const subtotal = document.createElement('strong');
-      subtotal.textContent = money(product.price * line.quantity);
+      subtotal.textContent = money(product.price == null ? null : product.price * line.quantity);
       row.append(image, info, subtotal); list.append(row);
     }
     if (!cart.length) {
       const empty = document.createElement('p'); empty.textContent = 'Your cart is empty. Find a little green for your space.'; list.append(empty);
     }
     document.querySelectorAll('[data-cart-count]').forEach(el => { el.textContent = count; el.hidden = count === 0; });
-    dialog.querySelector('[data-cart-total]').textContent = money(total);
+    dialog.querySelector('[data-cart-total]').textContent = money(unpriced ? null : total);
+    dialog.querySelector('[data-cart-quote-status]').textContent = 'Product subtotal excludes delivery or collection fees. Contact the store to confirm your request. Online checkout is not available yet.';
     persist();
   }
-  const ready = fetch(new URL('data/catalog.json', base)).then(response => {
-    if (!response.ok) throw new Error('Catalog unavailable');
-    return response.json();
-  }).then(data => { products = data; render(); });
+  function acceptKnowledge(data) {
+    products = data.catalog.products.map(p => ({ id:p.id, legacyId:p.legacy_id, name:p.name, slug:p.id, image:p.image_url || 'assets/plant-placeholder.svg', price:p.price_eur == null ? null : Math.round(Number(p.price_eur)*100) }));
+    cart.forEach(line => { const item = products.find(p => p.legacyId === line.id); if (item) line.id = item.id; });
+    render();
+  }
+  document.addEventListener('floriva:knowledge', event => acceptKnowledge(event.detail));
+  const ready = window.FlorivaKnowledge.ready.then(acceptKnowledge);
   async function openCart() {
-    try { await ready; } catch { list.textContent = 'The catalog could not be loaded. Please refresh the page.'; }
+    try {
+      await ready;
+      acceptKnowledge(await window.FlorivaKnowledge.refresh(true));
+      const calculation = await window.FlorivaKnowledge.quote(cart.map(line => ({id:line.id,quantity:quantity(line.quantity)})));
+      const note = dialog.querySelector('[data-cart-quote-status]');
+      if (calculation.known) dialog.querySelector('[data-cart-total]').textContent = '€' + calculation.goods_eur;
+      note.textContent = calculation.known ? 'Product subtotal confirmed against the current catalog. Delivery or collection fees require confirmation. Online checkout is not available yet.' : 'The selected products could not be priced. Please contact the store.';
+    } catch { dialog.querySelector('[data-cart-quote-status]').textContent = 'Showing saved prices. The current subtotal could not be confirmed; please contact the store.'; }
     if (!dialog.open) dialog.showModal();
   }
   async function add(form, open = true) {
