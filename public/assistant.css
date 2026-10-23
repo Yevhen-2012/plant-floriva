@@ -113,6 +113,7 @@
 #floriva-assistant .floriva-assistant-links a { display: inline-flex; align-items: center; min-height: 36px; padding: 7px 12px; border: 1px solid #96ac88; border-radius: 22px; color: #385333; text-decoration: none; font-size: 12px; background: #e9efdf; }
 #floriva-assistant .floriva-assistant-composer { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; padding: 13px; border-top: 1px solid #b8c8ac; background: #edf1e5; }
 #floriva-assistant .floriva-assistant-composer input { width: 0; min-width: 0; flex: 1; padding: 10px 4px; border: 0; border-radius: 0; background: transparent; color: #566d4b; font-size: 13px; opacity: 1; -webkit-text-fill-color: #566d4b; }
+#floriva-assistant .floriva-assistant-composer input:focus { outline: none; box-shadow: none; }
 #floriva-assistant .floriva-assistant-composer input::placeholder { color: #566d4b; opacity: 1; }
 #floriva-assistant .floriva-assistant-composer button { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 auto; padding: 10px; border: 0; border-radius: 50%; background: #3b5d36; color: #edf3e5; }
 #floriva-assistant .floriva-assistant-composer button:disabled { opacity: .5; }
