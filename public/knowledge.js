@@ -99,6 +99,7 @@
         } else if (heading.includes('phone')) {
           block.querySelectorAll(':scope > :not(h3)').forEach(el => el.remove());
           for (const phone of store.contacts.phones || []) { const p = document.createElement('p'); const a = document.createElement('a'); a.textContent = phone.number; a.href = 'tel:' + phone.number.replace(/[^+0-9]/g,''); p.append(document.createTextNode(phone.department + ': '),a); block.append(p); }
+          if (store.contacts.email) { const p = document.createElement('p'); const a = document.createElement('a'); a.textContent = store.contacts.email; a.href = 'mailto:' + encodeURIComponent(store.contacts.email); p.append(a); block.append(p); }
         } else if (heading.includes('schedule')) {
           block.querySelectorAll(':scope > :not(h3)').forEach(el => el.remove());
           for (const [key,label] of [['monday_friday','Monday–Friday'],['saturday','Saturday'],['sunday','Sunday'],['public_holidays','Public holidays']]) { const p = document.createElement('p'); p.textContent = label + ': ' + (store.opening_hours[key] || 'not specified'); block.append(p); }
