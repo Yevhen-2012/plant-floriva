@@ -89,9 +89,12 @@ body .hero__content,body .hero__review-wrapper{opacity:1;visibility:visible;tran
   .footer__form .plant-newsletter-status:not(:empty) { animation: none; }
 }
 
-.cotact-wraper { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 36px); }
+.cotact-wraper { display: grid; align-items: stretch; grid-auto-rows: 1fr; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 36px); }
 .cotact-wraper .contact-content-wraper { width: auto; min-width: 0; }
-.cotact-wraper h3.h3 { font-size: clamp(26px, 3vw, 44px); line-height: 1.12; }
+.cotact-wraper .contact-content-wraper > h3.h3 { font-size: clamp(19px, 1.95vw, 30px); line-height: 1.2; margin-top: 0; margin-bottom: 1rem; }
+@media (min-width: 768px) and (max-width: 991px) {
+  .cotact-wraper .contact-content-wraper > h3.h3 { min-height: 2.4em; }
+}
 @media (max-width: 767px) {
   .cotact-wraper { grid-template-columns: minmax(0, 1fr); padding: 24px; }
 }
