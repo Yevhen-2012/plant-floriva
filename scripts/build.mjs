@@ -117,6 +117,7 @@ for (const route of routes) {
     const el = $(element);
     if ((el.attr('data-node-type') ?? '').startsWith('commerce')) el.removeAttr('data-node-type');
   });
+  $('input.footer__text-field[type="email"]').attr('readonly', '');
   $('form').not('[data-plant-add]').each((_, element) => {
     const form = $(element);
     form.attr('data-plant-newsletter', '').removeAttr('data-wf-page-id data-wf-element-id');
