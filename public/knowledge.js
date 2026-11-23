@@ -95,7 +95,6 @@
         const heading = block.querySelector('h3')?.textContent.toLowerCase() || '';
         if (heading.includes('addres')) {
           setText(block, '.text-block', store.address || 'Address not specified.');
-          const link = block.querySelector('a'); if (link && store.address) { link.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(store.address); link.rel = 'noopener'; }
         } else if (heading.includes('phone')) {
           block.querySelectorAll(':scope > :not(h3)').forEach(el => el.remove());
           for (const phone of store.contacts.phones || []) { const p = document.createElement('p'); const a = document.createElement('a'); a.textContent = phone.number; a.href = 'tel:' + phone.number.replace(/[^+0-9]/g,''); p.append(document.createTextNode(phone.department + ': '),a); block.append(p); }
