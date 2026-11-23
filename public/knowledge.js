@@ -97,7 +97,14 @@
           setText(block, '.text-block', store.address || 'Address not specified.');
         } else if (heading.includes('phone')) {
           block.querySelectorAll(':scope > :not(h3)').forEach(el => el.remove());
-          for (const phone of store.contacts.phones || []) { const p = document.createElement('p'); const a = document.createElement('a'); a.textContent = phone.number; a.href = 'tel:' + phone.number.replace(/[^+0-9]/g,''); p.append(document.createTextNode(phone.department + ': '),a); block.append(p); }
+          for (const phone of store.contacts.phones || []) {
+            const p = document.createElement('p');
+            const number = document.createElement('span');
+            number.className = 'contact-phone';
+            number.textContent = phone.number;
+            p.append(document.createTextNode(phone.department + ': '), number);
+            block.append(p);
+          }
           if (store.contacts.email) { const p = document.createElement('p'); const a = document.createElement('a'); a.textContent = store.contacts.email; a.href = 'mailto:' + encodeURIComponent(store.contacts.email); p.append(a); block.append(p); }
         } else if (heading.includes('schedule')) {
           block.querySelectorAll(':scope > :not(h3)').forEach(el => el.remove());
