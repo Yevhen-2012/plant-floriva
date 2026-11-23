@@ -57,3 +57,6 @@ body .hero__content,body .hero__review-wrapper{opacity:1;visibility:visible;tran
   .hero__content-button-wraper{flex-wrap:wrap;gap:1rem}
   :is(.trendy-section,.top-selling-section,.customer-review-section,.blog-section) .header-content .h3{font-size:clamp(1.75rem,8vw,2.375rem)}
 }
+
+.contact-content-wraper > h3.h3 { font-weight: 600; }
+.contact-content-wraper a:is([href^="tel:"], .contact-link) { color: #fff; text-decoration: none; }
