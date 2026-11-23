@@ -97,7 +97,12 @@
     if (form.matches('[data-plant-newsletter]')) {
       event.preventDefault(); event.stopImmediatePropagation();
       const status = form.querySelector('[role="status"]');
-      status.textContent = 'Email updates are not available yet. Please check back soon.';
+      if (status.textContent) return;
+      const button = form.querySelector('[type="submit"]');
+      form.style.setProperty('--subscribe-width', button.getBoundingClientRect().width + 'px');
+      button.disabled = true;
+      form.querySelector('[type="email"]')?.setAttribute('tabindex', '-1');
+      status.textContent = 'Thanks for your interest!';
     }
   }, true);
   document.addEventListener('click', event => {
