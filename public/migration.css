@@ -88,3 +88,10 @@ body .hero__content,body .hero__review-wrapper{opacity:1;visibility:visible;tran
 @media (prefers-reduced-motion: reduce) {
   .footer__form .plant-newsletter-status:not(:empty) { animation: none; }
 }
+
+.cotact-wraper { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 36px); }
+.cotact-wraper .contact-content-wraper { width: auto; min-width: 0; }
+.cotact-wraper h3.h3 { font-size: clamp(26px, 3vw, 44px); line-height: 1.12; }
+@media (max-width: 767px) {
+  .cotact-wraper { grid-template-columns: minmax(0, 1fr); padding: 24px; }
+}
