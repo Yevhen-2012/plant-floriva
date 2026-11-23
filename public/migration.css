@@ -98,3 +98,5 @@ body .hero__content,body .hero__review-wrapper{opacity:1;visibility:visible;tran
 @media (max-width: 767px) {
   .cotact-wraper { grid-template-columns: minmax(0, 1fr); padding: 24px; }
 }
+
+@media (max-width: 767px) { .cotact-wraper { grid-template-rows: repeat(3, 1fr); } .cotact-wraper > .contact-content-wraper { height: 100%; margin: 0; align-self: stretch; } }
