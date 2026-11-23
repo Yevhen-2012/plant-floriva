@@ -60,3 +60,5 @@ body .hero__content,body .hero__review-wrapper{opacity:1;visibility:visible;tran
 
 .contact-content-wraper > h3.h3 { font-weight: 600; }
 .contact-content-wraper a:is([href^="tel:"], .contact-link) { color: #fff; text-decoration: none; }
+
+.contact-content-wraper a[href^="tel:"] { margin-inline-start: 0.5em; display: inline-block; }
