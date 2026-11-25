@@ -30,6 +30,8 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+      - name: Allow Pages artifact metadata to propagate
+        run: sleep 30
       - name: Publish
         id: deployment
         uses: actions/deploy-pages@v5
