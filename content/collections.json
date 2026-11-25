@@ -13,7 +13,7 @@
             "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f61d321328190e3425c2a3_image17.jpeg",
             "alt": null
           },
-          "description": "Donec eu felis at libero co",
+          "description": "Explore succulents and find a plant that suits your space.",
           "price": null,
           "name": "trendy-plant",
           "slug": "trendy-plant"
@@ -23,7 +23,7 @@
         "id": "69f61d321328190e3425c2bc",
         "fieldData": {
           "main-img": null,
-          "description": "Vivamus vitae arcu vel velit efficitur vestibulum vel in purus. Maecenas euismod sapien eu arcu convallis, vitae",
+          "description": "Explore succulents and find a plant that suits your space.",
           "price": 9058,
           "name": "tropical",
           "slug": "tropical"
@@ -37,7 +37,7 @@
             "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f61d321328190e3425c29d_image2.jpeg",
             "alt": null
           },
-          "description": "Integer rutrum ante et nunc venenatis, id ultricies risus ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integ",
+          "description": "Explore succulents and find a plant that suits your space.",
           "price": 32394,
           "name": "succulents",
           "slug": "succulents"
@@ -51,7 +51,7 @@
             "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f61d321328190e3425c299_image18.jpeg",
             "alt": null
           },
-          "description": "Donec eu felis at libero consequat sagittis a et urna. Maecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum ma",
+          "description": "Explore succulents and find a plant that suits your space.",
           "price": 17469,
           "name": "cactus",
           "slug": "cactus"
@@ -65,7 +65,7 @@
             "url": "https://cdn.prod.website-files.com/69f5ef46cb7b2a0485879bfe/69f61d321328190e3425c2a0_image15.jpeg",
             "alt": null
           },
-          "description": "Maecenas euismod sapien eu arcu convallis, vitae ve",
+          "description": "Explore succulents and find a plant that suits your space.",
           "price": 98211,
           "name": "new arrivals",
           "slug": "new-arrivals"
@@ -133,7 +133,7 @@
             "69f61d321328190e3425c2be",
             "69f61d321328190e3425c2b8"
           ],
-          "description": "Fusce aliquet turpis at orci bibendum, non convallis justo tempor.\nMaecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum maximus.\nInteger rutrum ante et nunc venenatis, id ultricies risus ultricies.\nDonec eu felis at libero consequat sagittis a et urna.\nCras sit amet velit id nulla ",
+          "description": "Explore Alocasia and find a plant for your space.",
           "shippable": true,
           "tax-category": "standard-taxable",
           "default-sku": "69f61d3c7621c1fce04a2862",
@@ -146,7 +146,7 @@
           "is-trendy-plant": true,
           "trendy-sort-order": 4,
           "top-selling": true,
-          "short-descr": "Fusce aliquet turpis at orci bibendum, non convallis justo tempor. Maecenas euismod sapien eu arcu convallis.",
+          "short-descr": "Explore Alocasia and find a plant for your space.",
           "image-gallery": [
             {
               "fileId": "6a1893c46abbc45187ef7fb0",
@@ -176,7 +176,7 @@
           "category": [
             "69f61d321328190e3425c2bc"
           ],
-          "description": "Praesent nec orci at nulla consequat congue ut non arcu.\nDonec eu felis at libero consequat sagittis a et urna.\nMaecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum maximus.\nInteger rutrum ante et nunc venenatis, id ultricies risus",
+          "description": "Explore Dracaena and find a plant for your space.",
           "shippable": true,
           "tax-category": "standard-taxable",
           "default-sku": "69f61d3c7621c1fce04a288d",
@@ -189,7 +189,7 @@
           "is-trendy-plant": false,
           "trendy-sort-order": null,
           "top-selling": true,
-          "short-descr": "Praesent nec orci at nulla consequat congue ut non arcu. Donec eu felis at libero consequat sagittis a et urna.",
+          "short-descr": "Explore Dracaena and find a plant for your space.",
           "image-gallery": [
             {
               "fileId": "69f9ca135cc6be793cac11de",
@@ -225,7 +225,7 @@
             "69f61d321328190e3425c2bc",
             "69f61d321328190e3425c2ba"
           ],
-          "description": "Donec eu felis at libero consequat sagittis a et urna.\nPraesent nec orci at nulla consequat congue ut non arcu.\nVivamus vitae arcu vel velit efficitur vestibulum vel in purus.\nFusce aliquet turpis at orci bibendum, non convallis justo tempor.\nInteger rutrum ante ",
+          "description": "Explore Begonia and find a plant for your space.",
           "shippable": false,
           "tax-category": "standard-taxable",
           "default-sku": "69f61d3c7621c1fce04a2871",
@@ -238,7 +238,7 @@
           "is-trendy-plant": false,
           "trendy-sort-order": null,
           "top-selling": true,
-          "short-descr": "Donec eu felis at libero consequat sagittis a et urna. Praesent nec orci at nulla consequat congue ut non arcu.",
+          "short-descr": "Explore Begonia and find a plant for your space.",
           "image-gallery": [
             {
               "fileId": "6a18953d83e54d86cbd4289d",
@@ -269,7 +269,7 @@
             "69f61d321328190e3425c2bc",
             "69f61d321328190e3425c2b6"
           ],
-          "description": "Fusce aliquet turpis at orci bibendum, non convallis justo tempor.\nCras sit amet velit id nulla tempus dictum sit amet eu nisi.\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\nDonec eu felis at libero consequat sagittis a et urna.\nLorem ipsum dolor sit amet, consectetur adipiscing",
+          "description": "Explore Croton and find a plant for your space.",
           "shippable": true,
           "tax-category": "standard-taxable",
           "default-sku": "69f61d3c7621c1fce04a2844",
@@ -282,7 +282,7 @@
           "is-trendy-plant": true,
           "trendy-sort-order": 2,
           "top-selling": true,
-          "short-descr": "Fusce aliquet turpis at orci bibendum, non convallis justo tempor. Cras sit amet velit id nulla tempus dictum.",
+          "short-descr": "Explore Croton and find a plant for your space.",
           "image-gallery": [
             {
               "fileId": "69f9ca5c31e0d16cf89eee10",
@@ -313,7 +313,7 @@
             "69f61d321328190e3425c2ba",
             "69f61d321328190e3425c2b6"
           ],
-          "description": "Praesent nec orci at nulla consequat congue ut non arcu.\nInteger rutrum ante et nunc venenatis, id ultricies risus ultricies.\nSed auctor augue id tellus lacinia, nec ultricies est fermentum.\nFusce aliquet turpis at orci bibendum, non convallis j",
+          "description": "Explore Peperomia and find a plant for your space.",
           "shippable": false,
           "tax-category": "standard-taxable",
           "default-sku": "69f61d3c7621c1fce04a2842",
@@ -326,7 +326,7 @@
           "is-trendy-plant": false,
           "trendy-sort-order": null,
           "top-selling": false,
-          "short-descr": "Praesent nec orci at nulla consequat congue ut non arcu. Integer rutrum ante et nunc venenatis, id ultricies risus ultr",
+          "short-descr": "Explore Peperomia and find a plant for your space.",
           "image-gallery": [
             {
               "fileId": "6a1895c24097f49cc7e57f03",
@@ -357,7 +357,7 @@
             "69f61d321328190e3425c2ba",
             "69f61d321328190e3425c2b6"
           ],
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDonec eu felis at libero consequat sagittis a et urna.\nVestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.\nDonec eu felis at libero consequat sagittis a et urna.\nVestibulum ante ipsum primis in f",
+          "description": "Explore Dieffenbachia and find a plant for your space.",
           "shippable": true,
           "tax-category": "standard-taxable",
           "default-sku": "69f61d3c7621c1fce04a2851",
@@ -370,7 +370,7 @@
           "is-trendy-plant": false,
           "trendy-sort-order": null,
           "top-selling": true,
-          "short-descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis at libero consequat sagittis a et urna.",
+          "short-descr": "Explore Dieffenbachia and find a plant for your space.",
           "image-gallery": [
             {
               "fileId": "6a1895e862cfe83f95e4325c",
@@ -398,7 +398,7 @@
         "fieldData": {
           "sku-properties": [],
           "category": null,
-          "description": "Maecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum maximus.\nCras sit amet velit id nulla tempus dictum sit amet eu nisi.\nCras sit amet velit id nulla tempus dictum sit amet eu nisi.\nPraesent nec orci",
+          "description": "Explore Anthurium and find a plant for your space.",
           "shippable": false,
           "tax-category": "standard-taxable",
           "default-sku": "69f61d3c7621c1fce04a2869",
@@ -411,7 +411,7 @@
           "is-trendy-plant": false,
           "trendy-sort-order": null,
           "top-selling": true,
-          "short-descr": "Maecenas euismod sapien eu arcu convallis, vitae vestibulum ipsum maximus. Cras sit amet velit id nulla tempus .",
+          "short-descr": "Explore Anthurium and find a plant for your space.",
           "image-gallery": [
             {
               "fileId": "6a18960ada05636672db93d7",
