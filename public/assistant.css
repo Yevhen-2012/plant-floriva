@@ -94,6 +94,7 @@
 #floriva-assistant .floriva-assistant-heading { min-width: 0; }
 #floriva-assistant .floriva-assistant-heading h2 { margin: 0; font: 500 15px/1.4 Inter, Arial, sans-serif; letter-spacing: normal; color: #233a27; }
 #floriva-assistant .floriva-assistant-heading p { margin: 3px 0 0; font-size: 11px; line-height: 1.5; color: #506749; }
+#floriva-assistant .floriva-assistant-demo { flex: 0 0 auto; margin: 0; padding: 8px 18px; background: #edf2e8; color: #32482f; font: 400 11px/1.4 Inter, Arial, sans-serif; }
 #floriva-assistant .floriva-assistant-close, #floriva-assistant .floriva-assistant-new { display: grid; place-items: center; width: 40px; height: 40px; padding: 9px; flex: 0 0 auto; border: 0; border-radius: 50%; background: transparent; color: #415d39; }
 #floriva-assistant .floriva-assistant-new { margin-left: auto; }
 #floriva-assistant .floriva-assistant-new:disabled { opacity: .45; }

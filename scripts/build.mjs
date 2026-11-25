@@ -90,6 +90,7 @@ for (const route of routes) {
   if (route === '/product') source = manifest.pages['/product/echinocactus'];
   let html = await fs.readFile(path.join(root, 'snapshots', source), 'utf8');
   const $ = load(html);
+  $('.nav__logo-wraper').append('<span class="plant-demo-badge">Portfolio demo</span>');
   $('html').attr({ lang: 'en', translate: 'no' }).addClass('notranslate').removeAttr('data-wf-domain data-wf-status');
   $('head').prepend('<meta name="google" content="notranslate">');
   $('link[rel="preconnect"],link[rel="dns-prefetch"],script[type="text/x-wf-template"]').remove();
